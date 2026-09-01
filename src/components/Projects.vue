@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { projects } from '@/data/portfolioData'
-import { ExternalLink } from '@lucide/vue'
+import { ExternalLink, FileText } from '@lucide/vue'
 import { GitHub } from '@/icons/brandIcons'
 </script>
 
@@ -67,6 +67,17 @@ import { GitHub } from '@/icons/brandIcons'
               >
                 <GitHub class="w-4 h-4" />
                 Source
+              </a>
+              <a
+                v-if="project.certificate"
+                :href="project.certificate"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 font-medium rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-colors text-sm"
+                :aria-label="`View ${project.title} certificate`"
+              >
+                <FileText class="w-4 h-4" />
+                Certificate
               </a>
             </div>
           </div>

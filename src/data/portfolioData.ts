@@ -30,6 +30,7 @@ export interface Project {
     live?: string
     github?: string
   }
+  certificate?: string
 }
 
 export interface Skill {
@@ -59,6 +60,15 @@ export interface ContactInfo {
   icon: Component
 }
 
+export interface Certificate {
+  id: string
+  title: string
+  issuer: string
+  date: string
+  image: string
+  pdf?: string
+}
+
 export const socialLinks: SocialLink[] = [
   { label: 'GitHub', href: 'https://github.com/sanpila', icon: GitHub },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/sanpila', icon: LinkedIn },
@@ -72,31 +82,33 @@ export const projects: Project[] = [
     title: 'Orkun Service Marketplace',
     description:
       'A two-sided local-services marketplace with a mobile mini app, admin dashboard, and landing website. Built as Product Manager/Frontend Developer, I led the product direction and built the customer mini app and admin web platform.',
-    image: '/projects/orkun-admin.jpg',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Marketplace',
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'REST API'],
     links: {
       live: 'https://orkun-app.com',
       github: 'https://github.com/sanpila/orkun',
     },
+    certificate: '/certificates/orkun-project.pdf',
   },
   {
     id: 'umpay',
     title: 'UMPay Digital Wallet Platform',
     description:
       'A comprehensive digital payment ecosystem including admin portal, payment gateway checkout, customer wallet web app, and marketing landing site. Built as Product Manager and Frontend Developer across all four web products.',
-    image: '/projects/umpay-admin.jpg',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Wallet',
     techStack: ['Vue.js', 'React', 'TypeScript', 'Tailwind CSS', 'Element UI'],
     links: {
       live: 'https://umpay.com',
       github: 'https://github.com/sanpila/umpay',
     },
+    certificate: '/certificates/umpay-project.pdf',
   },
   {
     id: 'ionecards',
     title: 'iOneCards E-Commerce & Loyalty',
     description:
       'A Cambodia-focused e-commerce and loyalty web application connecting customers with products, merchants, promotions, vouchers, and rewards. Built as a multilingual Nuxt.js single-page application with PWA support.',
-    image: '/projects/ione-cards.jpg',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=iOneCards',
     techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Tailwind CSS', 'Bootstrap'],
     links: {
       live: 'https://ione-cards.com',
@@ -108,7 +120,7 @@ export const projects: Project[] = [
     title: 'Gorden Web – Music & Audiobook Discovery',
     description:
       'A multilingual, responsive web platform for browsing music, artists, albums, audiobooks, and top charts. Built with Nuxt.js and Vue.js, connected to the Gorden/E-Play mobile ecosystem via deep links and QR codes.',
-    image: '/projects/gorden-web.jpg',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Gorden+Web',
     techStack: ['Nuxt.js', 'Vue.js', 'Vuetify', 'Tailwind CSS', 'REST API'],
     links: {
       live: 'https://gorden.com',
@@ -120,7 +132,7 @@ export const projects: Project[] = [
     title: 'Chatwoot Customer Engagement',
     description:
       'An open-source, self-hosted customer engagement platform that centralizes messages from web chat, email, WhatsApp, social media, and APIs into a shared inbox. Contributed to the Vue.js frontend with real-time Action Cable integration.',
-    image: '/projects/profile.jpg',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Chatwoot',
     techStack: ['Vue.js', 'Ruby on Rails', 'Action Cable', 'Docker', 'TypeScript'],
     links: {
       live: 'https://chatwoot.org',
@@ -254,6 +266,44 @@ export const contactInfo: ContactInfo[] = [
   { label: 'Email', value: 'pilasan19@gmail.com', href: 'mailto:pilasan19@gmail.com', icon: Mail },
   { label: 'Location', value: 'Chamkar, Russia Keo, Phnom Penh, Cambodia', icon: MapPin },
   { label: 'Phone', value: '0856 421 82', href: 'tel:+85585642182', icon: Phone },
+]
+
+export const certificates: Certificate[] = [
+  {
+    id: 'scrum-master',
+    title: 'Agile Scrum Master',
+    issuer: 'Online Course',
+    date: 'Feb 2024',
+    image: '/certificates/scrum-master.jpg',
+  },
+  {
+    id: 'product-management',
+    title: 'Project Management',
+    issuer: 'Sunrise Institute of Technology',
+    date: 'Aug 2023',
+    image: '/certificates/pm.jpg',
+  },
+  {
+    id: 'practical-leadership',
+    title: 'Practical Leadership Skills',
+    issuer: 'Online Course',
+    date: 'Dec 2024',
+    image: '/certificates/leadership.jpg',
+  },
+  {
+    id: 'class-monitor',
+    title: 'Outstanding Class Monitor',
+    issuer: 'Pannasastra University of Cambodia',
+    date: '2016',
+    image: '/certificates/class-monitor.jpg',
+  },
+  {
+    id: 'outstanding-student',
+    title: 'Outstanding Student Award',
+    issuer: 'Norton University',
+    date: '2013',
+    image: '/certificates/outstanding.jpg',
+  },
 ]
 
 export const personalInfo = {
