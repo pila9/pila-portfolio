@@ -15,6 +15,9 @@ dist-ssr
 # Kilo
 .kilo/
 
+# Source data (extracted content lives in src/data/portfolioData.ts)
+workCV/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

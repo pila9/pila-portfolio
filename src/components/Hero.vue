@@ -14,11 +14,10 @@ const { scrollTo } = useSmoothScroll()
             {{ personalInfo.title }}
           </p>
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-100">
-            <span class="block">Hi, I'm</span>
+            <span class="block mb-2">Hi, I'm</span>
             <span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-              {{ personalInfo.name }}
+              {{ personalInfo.name }}, {{ personalInfo.title }}
             </span>
-            <span class="block">, {{ personalInfo.title }}</span>
           </h1>
         </div>
 
