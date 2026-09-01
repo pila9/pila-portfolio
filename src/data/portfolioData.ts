@@ -24,6 +24,7 @@ export interface SocialLink {
 export interface Project {
   id: string
   title: string
+  subtitle: string
   description: string
   image: string
   techStack: string[]
@@ -105,36 +106,95 @@ export const socialLinks: SocialLink[] = [
 
 export const projects: Project[] = [
   {
-    id: 'orkun-marketplace',
-    title: 'Orkun Service Marketplace',
+    id: 'umpay-admin',
+    title: 'UMPay Admin Web V2',
+    subtitle: 'Digital Wallet Operations Portal',
     description:
-      'A two-sided local-services marketplace with a mobile mini app, admin dashboard, and landing website. Built as Product Manager/Frontend Developer, I led the product direction and built the customer mini app and admin web platform.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Marketplace',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'REST API'],
+      'A secure, role-based operations portal for managing the UMPay digital wallet and payment ecosystem. Enables internal teams to monitor business performance through a real-time dashboard, manage users and merchants, review KYC verification, oversee balances and transaction activity, configure payment channels and exchange rates, and handle gateway orders. Also supports financial reporting, exports, promotional tools, vouchers, agent management, banners, card settings, and operational appeal handling.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Admin+Web',
+    techStack: ['Vue.js 2', 'Vue Router', 'Vuex', 'Element UI', 'Axios', 'ApexCharts', 'Vue I18n', 'Laravel 8'],
     links: {
-      live: 'https://orkun-app.com',
-      github: 'https://github.com/sanpila/orkun',
-    },
-    certificate: '/certificates/orkun-project.pdf',
-  },
-  {
-    id: 'umpay',
-    title: 'UMPay Digital Wallet Platform',
-    description:
-      'A comprehensive digital payment ecosystem including admin portal, payment gateway checkout, customer wallet web app, and marketing landing site. Built as Product Manager and Frontend Developer across all four web products.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Wallet',
-    techStack: ['Vue.js', 'React', 'TypeScript', 'Tailwind CSS', 'Element UI'],
-    links: {
-      live: 'https://umpay.com',
-      github: 'https://github.com/sanpila/umpay',
+      live: 'https://umpay.com/admin',
+      github: 'https://github.com/sanpila/umpay-admin',
     },
     certificate: '/certificates/umpay-project.pdf',
   },
   {
+    id: 'umpay-gateway',
+    title: 'UMPay Payment Gateway Web',
+    subtitle: 'Digital Wallet Checkout Portal',
+    description:
+      'A customer-facing checkout portal that lets customers complete payments through the UMPay mobile wallet. When a merchant creates an order, the page securely retrieves transaction details and presents a QR code or mobile deep link. Customers can scan the code or open UMPay directly on mobile to pay. Shows order amount, currency, merchant, product, purchase-order number, and payment expiry countdown.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Gateway',
+    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'QRCode React', 'Pusher', 'Webpack'],
+    links: {
+      live: 'https://umpay.com/gateway',
+      github: 'https://github.com/sanpila/umpay-gateway',
+    },
+    certificate: '/certificates/umpay-project.pdf',
+  },
+  {
+    id: 'umpay-web',
+    title: 'UMPay Web',
+    subtitle: 'Digital Wallet Customer App',
+    description:
+      'The customer-facing web application for the UMPay digital wallet. Enables users to manage funds, make payments, transfer money, and access wallet services. Features include secure account access, wallet management, deposit/withdrawal flows, wallet-to-wallet and bank transfers, QR-code payments, currency exchange, KYC verification, card services, vouchers, and multilingual support.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Web',
+    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Recharts', 'Webpack'],
+    links: {
+      live: 'https://umpay.com',
+      github: 'https://github.com/sanpila/umpay-web',
+    },
+    certificate: '/certificates/umpay-project.pdf',
+  },
+  {
+    id: 'umpay-landing',
+    title: 'UMPay Landing Web',
+    subtitle: 'Digital Wallet Marketing Website',
+    description:
+      'The public-facing marketing website for the UMPay digital wallet platform. Introduces the product, explains core financial services, and guides visitors to register or download the mobile app. Features responsive product pages, visual walkthroughs, video tutorials, FAQs, and regional information for deposits, withdrawals, transfers, and buy/sell services.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Landing',
+    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Webpack'],
+    links: {
+      live: 'https://umpay.com/landing',
+      github: 'https://github.com/sanpila/umpay-landing',
+    },
+    certificate: '/certificates/umpay-project.pdf',
+  },
+  {
+    id: 'orkun-admin',
+    title: 'Orkun Admin Web',
+    subtitle: 'Marketplace Operations Dashboard',
+    description:
+      'A centralized back-office platform for managing a service marketplace. Enables operations teams to oversee vendors, clients, services, orders, payments, promotions, and system settings from a responsive dashboard. Key capabilities include analytics, vendor management with KYC reviews, full order lifecycle management, service catalog, discounts, role-based administration, audit logs, and multilingual support.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Admin',
+    techStack: ['Next.js', 'React', 'Material UI', 'Redux Toolkit', 'Axios', 'Laravel'],
+    links: {
+      live: 'https://orkun-app.com/admin',
+      github: 'https://github.com/sanpila/orkun-admin',
+    },
+    certificate: '/certificates/orkun-project.pdf',
+  },
+  {
+    id: 'orkun-mini-app',
+    title: 'Orkun Mini App Web',
+    subtitle: 'Customer Booking Application',
+    description:
+      'A mobile-first customer application for discovering, booking, and tracking on-demand services inside a host mobile environment. Features include browsing promotional banners and service categories, searching services, saving favorites, creating bookings with address selection, real-time order progress tracking, booking history, notifications, and web-to-native bridge controls.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Mini+App',
+    techStack: ['React', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Webpack'],
+    links: {
+      live: 'https://orkun-app.com',
+      github: 'https://github.com/sanpila/orkun-mini-app',
+    },
+    certificate: '/certificates/orkun-project.pdf',
+  },
+  {
     id: 'ionecards',
     title: 'iOneCards E-Commerce & Loyalty',
+    subtitle: 'Cambodia E-Commerce Platform',
     description:
-      'A Cambodia-focused e-commerce and loyalty web application connecting customers with products, merchants, promotions, vouchers, and rewards. Built as a multilingual Nuxt.js single-page application with PWA support.',
+      'A Cambodia-focused e-commerce and loyalty web application connecting customers with products, merchants, promotions, vouchers, and rewards. Built as a multilingual Nuxt.js single-page application with PWA support, JWT authentication, and integration with external iOneCards API for product, cart, account, order, and payment operations.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=iOneCards',
     techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Tailwind CSS', 'Bootstrap'],
     links: {
@@ -144,9 +204,10 @@ export const projects: Project[] = [
   },
   {
     id: 'gorden-web',
-    title: 'Gorden Web – Music & Audiobook Discovery',
+    title: 'Gorden Web',
+    subtitle: 'Music & Audiobook Discovery',
     description:
-      'A multilingual, responsive web platform for browsing music, artists, albums, audiobooks, and top charts. Built with Nuxt.js and Vue.js, connected to the Gorden/E-Play mobile ecosystem via deep links and QR codes.',
+      'A multilingual, responsive web platform for browsing music, artists, albums, audiobooks, and top charts. Built with Nuxt.js and Vue.js, connected to the Gorden/E-Play mobile ecosystem via QR code sharing and deep links. Supports 30+ languages and is deployed as a Dockerized static site with Nginx.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Gorden+Web',
     techStack: ['Nuxt.js', 'Vue.js', 'Vuetify', 'Tailwind CSS', 'REST API'],
     links: {
@@ -157,8 +218,9 @@ export const projects: Project[] = [
   {
     id: 'chatwoot',
     title: 'Chatwoot Customer Engagement',
+    subtitle: 'Open-Source Support Platform',
     description:
-      'An open-source, self-hosted customer engagement platform that centralizes messages from web chat, email, WhatsApp, social media, and APIs into a shared inbox. Contributed to the Vue.js frontend with real-time Action Cable integration.',
+      'An open-source, self-hosted customer engagement platform that centralizes messages from web chat, email, WhatsApp, social media, and APIs into a shared inbox. Contributed to the Vue.js frontend with real-time Action Cable integration, deployed with Docker on DigitalOcean/Kubernetes.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Chatwoot',
     techStack: ['Vue.js', 'Ruby on Rails', 'Action Cable', 'Docker', 'TypeScript'],
     links: {

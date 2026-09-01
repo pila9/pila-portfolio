@@ -33,6 +33,9 @@ import { GitHub } from '@/icons/brandIcons'
             <h3 class="text-xl font-bold text-slate-100 group-hover:text-emerald-400 transition-colors">
               {{ project.title }}
             </h3>
+            <p v-if="project.subtitle" class="text-sm text-emerald-400/70 font-medium">
+              {{ project.subtitle }}
+            </p>
             <p class="text-slate-400 text-sm leading-relaxed">
               {{ project.description }}
             </p>
