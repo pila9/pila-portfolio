@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-900 text-slate-100 antialiased font-sans;
+  }
+}
+
+.section {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+}
