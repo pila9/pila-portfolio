@@ -8,6 +8,7 @@ import {
   Server,
   LayoutDashboard,
   Users,
+  Globe,
   Mail,
   MapPin,
   Phone,
@@ -67,6 +68,32 @@ export interface Certificate {
   date: string
   image: string
   pdf?: string
+}
+
+export interface ProductSkill {
+  id: string
+  name: string
+  level: number
+  description: string
+}
+
+export interface EducationItem {
+  id: string
+  degree: string
+  institution: string
+  period: string
+  description?: string
+  achievements?: string[]
+  type: 'degree' | 'training' | 'course'
+}
+
+export interface Reference {
+  name: string
+  title: string
+  company: string
+  phone: string
+  email: string
+  relationship: string
 }
 
 export const socialLinks: SocialLink[] = [
@@ -145,11 +172,17 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'Vue.js', icon: Code },
       { name: 'React.js', icon: Code },
+      { name: 'Vue.js', icon: Code },
       { name: 'Nuxt.js', icon: Code },
+      { name: 'Next.js', icon: Code },
       { name: 'JavaScript', icon: FileCode },
       { name: 'TypeScript', icon: FileCode },
+    ],
+  },
+  {
+    title: 'UI Framework',
+    skills: [
       { name: 'Tailwind CSS', icon: Palette },
       { name: 'Vuetify', icon: Palette },
       { name: 'Element UI', icon: Palette },
@@ -159,24 +192,34 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'Backend',
     skills: [
-      { name: 'Node.js', icon: Server },
       { name: 'PHP', icon: Server },
       { name: 'Laravel', icon: Server },
       { name: 'MySQL', icon: Database },
+      { name: 'Node.js', icon: Server },
       { name: 'REST APIs', icon: Server },
-      { name: 'GraphQL', icon: Server },
     ],
   },
   {
-    title: 'Tools & Methods',
+    title: 'Tools',
     skills: [
-      { name: 'Git', icon: GitBranch },
       { name: 'GitLab', icon: GitBranch },
       { name: 'GitHub', icon: GitBranch },
       { name: 'Jira', icon: LayoutDashboard },
       { name: 'Docker', icon: Server },
+    ],
+  },
+  {
+    title: 'Methodologies',
+    skills: [
       { name: 'Agile', icon: Users },
       { name: 'Scrum', icon: Users },
+    ],
+  },
+  {
+    title: 'Languages',
+    skills: [
+      { name: 'Khmer', icon: Globe },
+      { name: 'English', icon: Globe },
     ],
   },
 ]
@@ -314,4 +357,100 @@ export const personalInfo = {
   bioLong:
     "I'm a Product Owner and Front-end Developer based in Phnom Penh, Cambodia, with over 6 years of experience building web applications for fintech platforms and digital marketplaces. My expertise spans Vue.js, React, Nuxt.js, TypeScript, and Tailwind CSS, with a strong focus on performance, accessibility, and cross-functional product delivery.",
   email: 'pilasan19@gmail.com',
+}
+
+export const productSkills: ProductSkill[] = [
+  {
+    id: 'strategic-thinking',
+    name: 'Strategic Thinking & Vision',
+    level: 80,
+    description: 'Defining product vision, roadmap priorities, and aligning feature development with business goals',
+  },
+  {
+    id: 'communication',
+    name: 'Communication & Collaboration',
+    level: 80,
+    description: 'Cross-functional teamwork, stakeholder alignment, and clear technical/product communication',
+  },
+  {
+    id: 'documentary',
+    name: 'Documentation',
+    level: 80,
+    description: 'User stories, acceptance criteria, project documentation, and process standardization',
+  },
+  {
+    id: 'research',
+    name: 'Research & Analysis',
+    level: 80,
+    description: 'Market research, user analysis, feature iteration, and data-driven product decisions',
+  },
+]
+
+export const education: EducationItem[] = [
+  {
+    id: 'pannasastra',
+    degree: 'Computer Science Bachelor Degree',
+    institution: 'Pannasastra University of Cambodia (PUC)',
+    period: '2015 — 2017',
+    description: 'Also took English short courses.',
+    type: 'degree',
+  },
+  {
+    id: 'norton',
+    degree: 'Science, Also Outstanding student, class monitor',
+    institution: 'Norton University',
+    period: '2012 — 2016',
+    type: 'degree',
+  },
+  {
+    id: 'kampong-trabek',
+    degree: 'Science',
+    institution: 'Kampong Trabek High School',
+    period: '2009 — 2012',
+    type: 'degree',
+  },
+  {
+    id: 'ms-sql',
+    degree: 'Microsoft Visual C# Crystal Report & SQL Server',
+    institution: 'Vocation Training Center',
+    period: 'Jan 2016 — Apr 2016',
+    type: 'training',
+  },
+  {
+    id: 'project-management',
+    degree: 'Project Management',
+    institution: 'Sunrise Institute of Technology',
+    period: 'Aug 2023',
+    type: 'course',
+  },
+  {
+    id: 'methodology',
+    degree: 'Methodology And Application',
+    institution: 'Online Course',
+    period: 'Apr 2024',
+    type: 'course',
+  },
+  {
+    id: 'practical-leadership',
+    degree: 'Practical Leadership Skills',
+    institution: 'Online Course',
+    period: 'Dec 2024',
+    type: 'course',
+  },
+  {
+    id: 'agile-scrum-master',
+    degree: 'Agile Scrum Master',
+    institution: 'Online Course',
+    period: 'Feb 2024',
+    type: 'course',
+  },
+]
+
+export const reference: Reference = {
+  name: 'Sokneang Ty',
+  title: 'Production Manager / UXUI Lead',
+  company: 'Everlast & Apps Dev Co., Ltd',
+  phone: '+855 12 789 710',
+  email: 'sokneang0110@gmail.com',
+  relationship: 'Former colleague and direct report',
 }

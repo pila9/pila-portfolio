@@ -12,6 +12,7 @@ const navLinks: NavLink[] = [
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certifications', href: '#certifications' },
+  { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -19,7 +20,7 @@ const isMenuOpen = ref(false)
 const activeSection = ref('hero')
 const scrolled = ref(false)
 
-const sectionIds = ['hero', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact']
+const sectionIds = ['hero', 'about', 'skills', 'projects', 'experience', 'certifications', 'education', 'contact']
 
 const observerOptions = {
   root: null,

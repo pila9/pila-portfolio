@@ -6,6 +6,7 @@ import Skills from '@/components/Skills.vue'
 import Projects from '@/components/Projects.vue'
 import Experience from '@/components/Experience.vue'
 import Certifications from '@/components/Certifications.vue'
+import Education from '@/components/Education.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
 </script>
@@ -21,6 +22,7 @@ import Footer from '@/components/Footer.vue'
       <Projects />
       <Experience />
       <Certifications />
+      <Education />
       <Contact />
     </main>
 
