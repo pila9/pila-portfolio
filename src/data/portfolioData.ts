@@ -15,7 +15,7 @@ import {
   MapPin,
   Phone,
 } from '@lucide/vue'
-import { GitHub, LinkedIn, Twitter } from '@/icons/brandIcons'
+import { GitHub, LinkedIn, Telegram, Twitter } from '@/icons/brandIcons'
 
 export interface SocialLink {
   label: string
@@ -425,7 +425,7 @@ export const experiences: ExperienceItem[] = [
 export const contactInfo: ContactInfo[] = [
   { label: 'Email', value: 'pilasan19@gmail.com', href: 'mailto:pilasan19@gmail.com', icon: Mail },
   { label: 'Phone', value: '0856 421 82', href: 'tel:+85585642182', icon: Phone },
-  { label: 'Telegram', value: 'Pila Sann', href: 'https://t.me/pilasan19', icon: Globe },
+  { label: 'Telegram', value: 'Pila Sann', href: 'https://t.me/pilasan19', icon: Telegram },
   { label: 'LinkedIn', value: 'pila San', href: 'https://linkedin.com/in/sanpila', icon: LinkedIn },
   { label: 'Location', value: 'Chamkar, Russia Keo, Phnom Penh, Cambodia', icon: MapPin },
 ]

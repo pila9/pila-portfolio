@@ -34,6 +34,23 @@ export const LinkedIn: FunctionalComponent<{ class?: string }> = (props, { attrs
     ]
   )
 
+export const Telegram: FunctionalComponent<{ class?: string }> = (props, { attrs }) =>
+  h(
+    'svg',
+    {
+      ...props,
+      ...attrs,
+      viewBox: '0 0 24 24',
+      fill: 'currentColor',
+      strokeWidth: 0,
+    },
+    [
+      h('path', {
+        d: 'M21.92 3.11a1.5 1.5 0 00-1.53-.24L2.92 9.62a1.5 1.5 0 00.1 2.84l4.48 1.39 1.7 5.03a1.5 1.5 0 002.47.59l2.5-2.43 4.6 3.39a1.5 1.5 0 002.35-.91L23.98 4.6a1.5 1.5 0 00-2.06-1.49zM9.44 13.08l8.89-5.61-6.79 7.13-.26 2.22-1.84-3.74z',
+      }),
+    ]
+  )
+
 export const Twitter: FunctionalComponent<{ class?: string }> = (props, { attrs }) =>
   h(
     'svg',

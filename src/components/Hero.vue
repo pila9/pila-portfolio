@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSmoothScroll } from '@/composables/useSmoothScroll'
-import { personalInfo, socialLinks, techTags, resumeUrl } from '@/data/portfolioData'
+import { personalInfo, resumeUrl } from '@/data/portfolioData'
 import { Download } from '@lucide/vue'
 
 const { scrollTo } = useSmoothScroll()
@@ -36,8 +36,6 @@ const { scrollTo } = useSmoothScroll()
         <p class="text-lg text-slate-400 mb-8 max-w-2xl">
           {{ personalInfo.bio }}
         </p>
-
-        <!-- CTA buttons -->
         <div class="flex flex-col sm:flex-row gap-4 mb-8">
           <button
             type="button"
@@ -61,35 +59,6 @@ const { scrollTo } = useSmoothScroll()
           >
             <Download class="w-5 h-5" />
             Download CV
-          </a>
-        </div>
-
-        <!-- Tech stack tags -->
-        <div class="flex flex-wrap gap-2 mb-8">
-          <span
-            v-for="tech in techTags"
-            :key="tech"
-            class="px-4 py-2 text-sm font-medium text-slate-300 bg-slate-800/50 border border-slate-700/50 rounded-full hover:border-emerald-400/50 hover:text-emerald-400 transition-all duration-200"
-          >
-            {{ tech }}
-          </span>
-        </div>
-
-        <!-- Social links -->
-        <div class="flex gap-4">
-          <a
-            v-for="link in socialLinks"
-            :key="link.label"
-            :href="link.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            :aria-label="link.label"
-            class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/50 border border-slate-700/50 text-slate-300 hover:text-emerald-400 hover:border-emerald-400/50 transition-all duration-200 group"
-          >
-            <component
-              :is="link.icon"
-              class="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
-            />
           </a>
         </div>
       </div>
