@@ -136,6 +136,13 @@ export const socialLinks: SocialLink[] = [
 
 export const roles: Role[] = [
   {
+    id: 'product-manager',
+    title: 'Product Manager',
+    description:
+      'Define product vision, roadmap priorities, and align feature development with business goals.',
+    icon: Target,
+  },
+  {
     id: 'product-owner',
     title: 'Product Owner',
     description:
@@ -150,18 +157,11 @@ export const roles: Role[] = [
     icon: Code,
   },
   {
-    id: 'product-strategy',
-    title: 'Product Strategy',
+    id: 'web-developer',
+    title: 'Web Developer',
     description:
-      'Define product vision, roadmap priorities, and align feature development with business goals.',
-    icon: Target,
-  },
-  {
-    id: 'ui-ux',
-    title: 'UI/UX',
-    description:
-      'Design intuitive user interfaces, conduct user testing, and optimize the customer journey.',
-    icon: Palette,
+      'Develop and maintain web applications using modern technologies and best practices.',
+    icon: Server,
   },
 ]
 
