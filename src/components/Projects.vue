@@ -74,40 +74,6 @@ import { GitHub } from '@/icons/brandIcons'
                   {{ tech }}
                 </span>
               </div>
-
-              <div class="flex gap-3 pt-2">
-                <a
-                  v-if="project.links.live"
-                  :href="project.links.live"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500 text-slate-900 font-medium rounded-lg hover:bg-emerald-400 transition-colors text-sm"
-                >
-                  <ExternalLink class="w-4 h-4" />
-                  Live Demo
-                </a>
-                <a
-                  v-if="project.links.github"
-                  :href="project.links.github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center justify-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 font-medium rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-colors text-sm"
-                >
-                  <GitHub class="w-4 h-4" />
-                  Source
-                </a>
-                <a
-                  v-if="project.certificate"
-                  :href="project.certificate"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center justify-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 font-medium rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-colors text-sm"
-                  :aria-label="`View ${project.title} certificate`"
-                >
-                  <FileText class="w-4 h-4" />
-                  Certificate
-                </a>
-              </div>
             </div>
           </div>
         </div>
