@@ -470,7 +470,7 @@ export const certificates: Certificate[] = [
 
 export const personalInfo = {
   name: 'San Pila',
-  title: 'Product Owner / Front-end Developer',
+  title: 'Product Manager | Product Owner | Front-end Developer | Web Developer',
   tagline: 'Building Scalable Web Applications & Digital Products',
   bio: 'I build scalable, performant web applications using Vue.js, React, and TypeScript. As a Product Owner and Front-end Developer, I bridge engineering and business to deliver user-focused digital products.',
   bioLong:
