@@ -424,8 +424,10 @@ export const experiences: ExperienceItem[] = [
 
 export const contactInfo: ContactInfo[] = [
   { label: 'Email', value: 'pilasan19@gmail.com', href: 'mailto:pilasan19@gmail.com', icon: Mail },
-  { label: 'Location', value: 'Chamkar, Russia Keo, Phnom Penh, Cambodia', icon: MapPin },
   { label: 'Phone', value: '0856 421 82', href: 'tel:+85585642182', icon: Phone },
+  { label: 'Telegram', value: 'Pila Sann', href: 'https://t.me/pilasan19', icon: Globe },
+  { label: 'LinkedIn', value: 'pila San', href: 'https://linkedin.com/in/sanpila', icon: LinkedIn },
+  { label: 'Location', value: 'Chamkar, Russia Keo, Phnom Penh, Cambodia', icon: MapPin },
 ]
 
 export const certificates: Certificate[] = [
