@@ -518,15 +518,15 @@ export const certificates: Certificate[] = [
   {
     id: 'class-monitor',
     title: 'Outstanding Class Monitor',
-    issuer: 'Pannasastra University of Cambodia',
-    date: '2016',
+    issuer: 'Norton University',
+    date: '2015-2016',
     image: '/certificates/class-monitor.jpg',
   },
   {
     id: 'outstanding-student',
     title: 'Outstanding Student Award',
     issuer: 'Norton University',
-    date: '2013',
+    date: '2015-2016',
     image: '/certificates/outstanding.jpg',
   },
 ]
