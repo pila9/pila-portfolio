@@ -62,3 +62,13 @@ export const SqlServerIcon = createBrandIcon('simple-icons:microsoftsqlserver', 
 
 // Messaging Services
 export const PusherIcon = createBrandIcon('simple-icons:pusher', '#300D4F')
+
+// AI Tools Logos
+export const ChatGptIcon = createBrandIcon('simple-icons:openai', '#10A37F')
+export const CopilotIcon = createBrandIcon('simple-icons:githubcopilot', '#000000')
+export const ClaudeIcon = createBrandIcon('simple-icons:anthropic', '#D97757')
+export const GeminiIcon = createBrandIcon('simple-icons:googlegemini', '#8E75FF')
+export const KiloCodeIcon = createBrandIcon('fluent-mdl2:code', '#0078D4')
+export const CodexIcon = createBrandIcon('simple-icons:openai', '#10A37F')
+export const PerplexityIcon = createBrandIcon('simple-icons:perplexity', '#1FB8A8')
+export const StitchIcon = createBrandIcon('lucide:sparkles', '#8B5CF6')

@@ -45,6 +45,14 @@ import {
   MySqlIcon,
   SqlServerIcon,
   PusherIcon,
+  ChatGptIcon,
+  CopilotIcon,
+  ClaudeIcon,
+  GeminiIcon,
+  KiloCodeIcon,
+  CodexIcon,
+  PerplexityIcon,
+  StitchIcon,
 } from '@/icons/brandIcons'
 
 export interface SocialLink {
@@ -267,10 +275,10 @@ export const projects: Project[] = [
   },
   {
     id: 'ionecards',
-    title: 'iOneCards E-Commerce & Loyalty',
+    title: 'iOneCards E-Commerce Platform',
     subtitle: 'Cambodia E-Commerce Platform',
     description:
-      'A Cambodia-focused e-commerce and loyalty web application connecting customers with products, merchants, promotions, vouchers, and rewards. Built as a multilingual Nuxt.js single-page application with PWA support, JWT authentication, and integration with external iOneCards API for product, cart, account, order, and payment operations.',
+      'A Cambodia-focused e-commerce web application connecting customers with products, merchants, promotions, vouchers, and rewards. Built as a multilingual Nuxt.js single-page application with PWA support, JWT authentication, and integration with external iOneCards API for product, cart, account, order, and payment operations.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=iOneCards',
     techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Tailwind CSS', 'Bootstrap'],
     links: {
@@ -372,6 +380,19 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Agile', icon: Repeat },
       { name: 'Scrum', icon: Repeat },
+    ],
+  },
+  {
+    title: 'AI Tools',
+    skills: [
+      { name: 'ChatGPT', icon: ChatGptIcon },
+      { name: 'GitHub Copilot', icon: CopilotIcon },
+      { name: 'Claude', icon: ClaudeIcon },
+      { name: 'Gemini', icon: GeminiIcon },
+      { name: 'Kilo Code', icon: KiloCodeIcon },
+      { name: 'Codex', icon: CodexIcon },
+      { name: 'perplexity.ai', icon: PerplexityIcon },
+      { name: 'stitch.ai', icon: StitchIcon },
     ],
   },
   {
