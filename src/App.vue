@@ -20,8 +20,8 @@ import Contact from '@/components/Contact.vue'
       <Skills />
       <Projects />
       <Experience />
-      <Certifications />
       <Education />
+      <Certifications />
       <Contact />
     </main>
   </div>
