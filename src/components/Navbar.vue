@@ -98,8 +98,7 @@ const closeMenu = () => {
       <!-- Download CV Button -->
       <a
         :href="resumeUrl"
-        target="_blank"
-        rel="noopener noreferrer"
+        download="Pila-San-CV.pdf"
         class="hidden md:flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 font-medium rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-colors text-sm"
       >
         <Download class="w-4 h-4" />

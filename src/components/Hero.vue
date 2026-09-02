@@ -53,8 +53,7 @@ const { scrollTo } = useSmoothScroll()
           </button>
           <a
             :href="resumeUrl"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Pila-San-CV.pdf"
             class="px-8 py-3 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-all duration-200 flex items-center justify-center gap-2"
           >
             <Download class="w-5 h-5" />
