@@ -4,7 +4,7 @@ import { Mail, Phone } from '@lucide/vue'
 </script>
 
 <template>
-  <section id="about" class="section pt-12 md:pt-20">
+  <section id="about" class="section pt-8 md:pt-12">
     <div class="container mx-auto">
       <div class="text-center mb-12">
         <p class="text-sm font-medium text-emerald-400 uppercase tracking-wider mb-4">

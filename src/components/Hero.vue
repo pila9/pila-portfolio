@@ -9,7 +9,7 @@ const { scrollTo } = useSmoothScroll()
 <template>
   <section
     id="hero"
-    class="section min-h-screen flex items-center justify-center pt-16 pb-12"
+    class="section min-h-screen flex items-center justify-center"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
       <div class="max-w-5xl mx-auto">

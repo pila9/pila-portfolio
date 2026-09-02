@@ -6,8 +6,8 @@ const contactLinks = computed(() => contactInfo.filter((i) => i.href))
 </script>
 
 <template>
-  <footer class="bg-slate-900 border-t border-slate-700/50">
-    <div class="container mx-auto section py-12 md:py-16">
+  <footer class="bg-slate-900 border-t border-slate-700/50 section">
+    <div class="container mx-auto">
       <div class="text-center">
         <p class="text-sm font-medium text-emerald-400 uppercase tracking-wider mb-4">
           Connect
