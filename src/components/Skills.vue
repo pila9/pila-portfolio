@@ -15,30 +15,24 @@ import { skillCategories } from '@/data/portfolioData'
         </p>
       </div>
 
-      <div class="space-y-10">
+      <div class="grid sm:grid-cols-2 gap-6">
         <div
           v-for="category in skillCategories"
           :key="category.title"
-          class="space-y-4"
+          class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300"
         >
-          <div class="flex items-baseline justify-between">
-            <h3 class="text-xl font-semibold text-slate-200">
-              {{ category.title }}
-            </h3>
-            <span class="text-sm text-slate-500">
-              {{ category.skills.length }} technologies
-            </span>
-          </div>
-
-          <div class="flex flex-wrap gap-2">
-            <span
+          <h3 class="text-lg font-semibold text-slate-200 mb-4">
+            {{ category.title }}
+          </h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div
               v-for="skill in category.skills"
               :key="skill.name"
-              class="px-4 py-2 text-sm font-medium text-slate-300 bg-slate-800/50 border border-slate-700/50 rounded-full hover:border-emerald-400/50 hover:text-emerald-400 transition-all duration-200 flex items-center gap-2"
+              class="flex items-center gap-2 bg-slate-900/40 border border-slate-700/40 rounded-lg px-3 py-2 text-sm text-slate-300"
             >
-              <component :is="skill.icon" class="w-4 h-4 text-emerald-400" />
-              <span>{{ skill.name }}</span>
-            </span>
+              <component :is="skill.icon" class="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <span class="truncate">{{ skill.name }}</span>
+            </div>
           </div>
         </div>
       </div>

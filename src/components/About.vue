@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { personalInfo, roles, productSkills, reference } from '@/data/portfolioData'
-import { Mail, Phone } from '@lucide/vue'
+import { personalInfo, roles, productSkills } from '@/data/portfolioData'
 </script>
 
 <template>
@@ -99,38 +98,6 @@ import { Mail, Phone } from '@lucide/vue'
                   />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reference -->
-      <div class="mt-12 pt-8 border-t border-slate-700/50">
-        <div class="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6">
-          <h3 class="text-lg font-semibold text-slate-100 mb-2">
-            Reference Available
-          </h3>
-          <p class="text-slate-400 text-sm mb-3">{{ reference.relationship }}</p>
-          <div class="space-y-1">
-            <p class="font-medium text-slate-200">{{ reference.name }}</p>
-            <p class="text-slate-400 text-sm">
-              {{ reference.title }}<br />{{ reference.company }}
-            </p>
-            <div class="flex gap-4 text-sm text-slate-400 mt-2">
-              <a
-                :href="`mailto:${reference.email}`"
-                class="flex items-center gap-1 hover:text-emerald-400 transition-colors"
-              >
-                <Mail class="w-4 h-4" />
-                <span>Email</span>
-              </a>
-              <a
-                :href="`tel:${reference.phone.replace(/\D/g, '')}`"
-                class="flex items-center gap-1 hover:text-emerald-400 transition-colors"
-              >
-                <Phone class="w-4 h-4" />
-                <span>Phone</span>
-              </a>
             </div>
           </div>
         </div>

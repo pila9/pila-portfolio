@@ -10,7 +10,6 @@ import { contactInfo } from '@/data/portfolioData'
           Get in Touch
         </p>
         <h2 class="text-3xl font-bold text-slate-100 mb-4">Contact</h2>
-
       </div>
 
       <div class="max-w-4xl mx-auto">

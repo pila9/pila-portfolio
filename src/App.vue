@@ -5,8 +5,9 @@ import About from '@/components/About.vue'
 import Skills from '@/components/Skills.vue'
 import Projects from '@/components/Projects.vue'
 import Experience from '@/components/Experience.vue'
-import Certifications from '@/components/Certifications.vue'
 import Education from '@/components/Education.vue'
+import Certifications from '@/components/Certifications.vue'
+import Reference from '@/components/Reference.vue'
 import Contact from '@/components/Contact.vue'
 </script>
 
@@ -23,6 +24,7 @@ import Contact from '@/components/Contact.vue'
       <Education />
       <Certifications />
       <Contact />
+      <Reference />
     </main>
   </div>
 </template>

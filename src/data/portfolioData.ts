@@ -1,21 +1,51 @@
 import type { Component } from 'vue'
 import {
-  GitBranch,
   Code,
-  FileCode,
   Palette,
   Database,
   Server,
-  LayoutDashboard,
-  Users,
-  Globe,
   Package,
   Target,
   Mail,
   MapPin,
   Phone,
+  Network,
+  Wifi,
+  Send,
+  FolderGit2,
+  Repeat,
+  Languages,
+  RefreshCw,
 } from '@lucide/vue'
-import { GitHub, LinkedIn, Telegram, Twitter } from '@/icons/brandIcons'
+
+import {
+  GitHub,
+  LinkedIn,
+  Telegram,
+  Twitter,
+  ReactIcon,
+  VueIcon,
+  NuxtIcon,
+  JavaScriptIcon,
+  TypeScriptIcon,
+  TailwindIcon,
+  VuetifyIcon,
+  ElementIcon,
+  MuiIcon,
+  BootstrapIcon,
+  PhpIcon,
+  LaravelIcon,
+  NodeIcon,
+  CSharpIcon,
+  DotNetIcon,
+  JiraIcon,
+  GitLabIcon,
+  DockerIcon,
+  NginxIcon,
+  MySqlIcon,
+  SqlServerIcon,
+  PusherIcon,
+} from '@/icons/brandIcons'
 
 export interface SocialLink {
   label: string
@@ -95,15 +125,6 @@ export interface EducationItem {
   description?: string
   achievements?: string[]
   type: 'degree' | 'training' | 'course'
-}
-
-export interface Reference {
-  name: string
-  title: string
-  company: string
-  phone: string
-  email: string
-  relationship: string
 }
 
 export const socialLinks: SocialLink[] = [
@@ -289,54 +310,75 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'React.js', icon: Code },
-      { name: 'Vue.js', icon: Code },
-      { name: 'Nuxt.js', icon: Code },
-      { name: 'Next.js', icon: Code },
-      { name: 'JavaScript', icon: FileCode },
-      { name: 'TypeScript', icon: FileCode },
+      { name: 'React.js', icon: ReactIcon },
+      { name: 'Vue.js', icon: VueIcon },
+      { name: 'Nuxt.js', icon: NuxtIcon },
+      { name: 'JavaScript', icon: JavaScriptIcon },
+      { name: 'TypeScript', icon: TypeScriptIcon },
     ],
   },
   {
     title: 'UI Framework',
     skills: [
-      { name: 'Tailwind CSS', icon: Palette },
-      { name: 'Vuetify', icon: Palette },
-      { name: 'Element UI', icon: Palette },
-      { name: 'MUI', icon: Palette },
+      { name: 'TailwindCSS', icon: TailwindIcon },
+      { name: 'Vuetify', icon: VuetifyIcon },
+      { name: 'Element UI', icon: ElementIcon },
+      { name: 'MUI', icon: MuiIcon },
+      { name: 'Bootstrap', icon: BootstrapIcon },
     ],
   },
   {
     title: 'Backend',
     skills: [
-      { name: 'PHP', icon: Server },
-      { name: 'Laravel', icon: Server },
-      { name: 'MySQL', icon: Database },
-      { name: 'Node.js', icon: Server },
-      { name: 'REST APIs', icon: Server },
+      { name: 'PHP', icon: PhpIcon },
+      { name: 'Laravel', icon: LaravelIcon },
+      { name: 'Node.js', icon: NodeIcon },
+      { name: 'REST APIs', icon: Network },
+      { name: 'C#', icon: CSharpIcon },
+      { name: 'ASP.NET Core', icon: DotNetIcon },
     ],
   },
   {
-    title: 'Tools',
+    title: 'DevOps & Tools',
     skills: [
-      { name: 'GitLab', icon: GitBranch },
-      { name: 'GitHub', icon: GitBranch },
-      { name: 'Jira', icon: LayoutDashboard },
-      { name: 'Docker', icon: Server },
+      { name: 'Jira', icon: JiraIcon },
+      { name: 'GitLab', icon: GitLabIcon },
+      { name: 'GitHub', icon: GitHub },
+      { name: 'Jump Server', icon: Network },
+      { name: 'Docker', icon: DockerIcon },
+      { name: 'Nginx', icon: NginxIcon },
+      { name: 'CI/CD', icon: RefreshCw },
+    ],
+  },
+  {
+    title: 'Database',
+    skills: [
+      { name: 'MySQL', icon: MySqlIcon },
+      { name: 'SQL Server', icon: SqlServerIcon },
+    ],
+  },
+  {
+    title: 'Messaging & Distributed Systems',
+    skills: [
+      { name: 'WebSocket', icon: Wifi },
+      { name: 'XMPP', icon: Send },
+      { name: 'Pusher', icon: PusherIcon },
+      { name: 'Microservices', icon: Network },
+      { name: 'Monorepo', icon: FolderGit2 },
     ],
   },
   {
     title: 'Methodologies',
     skills: [
-      { name: 'Agile', icon: Users },
-      { name: 'Scrum', icon: Users },
+      { name: 'Agile', icon: Repeat },
+      { name: 'Scrum', icon: Repeat },
     ],
   },
   {
     title: 'Languages',
     skills: [
-      { name: 'Khmer', icon: Globe },
-      { name: 'English', icon: Globe },
+      { name: 'Khmer', icon: Languages },
+      { name: 'English', icon: Languages },
     ],
   },
 ]
@@ -565,12 +607,3 @@ export const education: EducationItem[] = [
     type: 'course',
   },
 ]
-
-export const reference: Reference = {
-  name: 'Sokneang Ty',
-  title: 'Production Manager / UXUI Lead',
-  company: 'Everlast & Apps Dev Co., Ltd',
-  phone: '+855 12 789 710',
-  email: 'sokneang0110@gmail.com',
-  relationship: 'Former colleague and direct report',
-}
