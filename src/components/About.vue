@@ -13,26 +13,53 @@ import { Mail, Phone } from '@lucide/vue'
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <!-- Bio -->
-        <div class="space-y-6 text-slate-300">
-          <p class="text-base leading-relaxed">
-            {{ personalInfo.bioLong }}
-          </p>
-          <p class="text-base leading-relaxed">
-            I'm passionate about creating clean, efficient, and accessible user
-            interfaces that solve real-world problems. When I'm not coding,
-            you can find me contributing to open-source projects or mentoring
-            developers in the community.
-          </p>
+      <div class="grid lg:grid-cols-3 gap-12 items-start">
+        <!-- Profile Image -->
+        <div class="flex justify-center lg:justify-center">
+          <div class="relative">
+            <div
+              class="w-48 h-48 rounded-2xl overflow-hidden ring-4 ring-emerald-400/20 border-2 border-slate-700/50 shadow-lg"
+            >
+              <img
+                :src="personalInfo.profileImage"
+                :alt="personalInfo.name"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="absolute -bottom-3 -right-3 bg-emerald-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              {{ personalInfo.title }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio & Reference -->
+        <div class="lg:col-span-2 space-y-8">
+          <div class="space-y-4 text-slate-300">
+            <p class="text-base leading-relaxed">
+              {{ personalInfo.bioLong }}
+            </p>
+            <p class="text-base leading-relaxed">
+              I'm passionate about creating clean, efficient, and accessible user
+              interfaces that solve real-world problems. When I'm not coding,
+              you can find me contributing to open-source projects or mentoring
+              developers in the community.
+            </p>
+          </div>
 
           <!-- Reference -->
-          <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+          <div
+            class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300"
+          >
             <h3 class="text-lg font-semibold text-slate-100 mb-2">Reference Available</h3>
             <p class="text-slate-400 text-sm mb-3">{{ reference.relationship }}</p>
             <div class="space-y-1">
               <p class="font-medium text-slate-200">{{ reference.name }}</p>
-              <p class="text-slate-400 text-sm">{{ reference.title }}<br />{{ reference.company }}</p>
+              <p class="text-slate-400 text-sm">
+                {{ reference.title }}<br />{{ reference.company }}
+              </p>
               <div class="flex gap-4 text-sm text-slate-400 mt-2">
                 <a
                   :href="`mailto:${reference.email}`"

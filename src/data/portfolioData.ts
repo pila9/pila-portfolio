@@ -419,6 +419,7 @@ export const personalInfo = {
   bioLong:
     "I'm a Product Owner and Front-end Developer based in Phnom Penh, Cambodia, with over 6 years of experience building web applications for fintech platforms and digital marketplaces. My expertise spans Vue.js, React, Nuxt.js, TypeScript, and Tailwind CSS, with a strong focus on performance, accessibility, and cross-functional product delivery.",
   email: 'pilasan19@gmail.com',
+  profileImage: '/pila.png',
 }
 
 export const productSkills: ProductSkill[] = [
