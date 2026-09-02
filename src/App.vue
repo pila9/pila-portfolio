@@ -14,7 +14,7 @@ import Contact from '@/components/Contact.vue'
   <div class="bg-slate-900 text-slate-100 min-h-screen">
     <Navbar />
 
-    <main class="pt-16">
+    <main class="pt-12">
       <Hero />
       <About />
       <Skills />

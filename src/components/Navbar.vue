@@ -72,7 +72,7 @@ const closeMenu = () => {
     class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
     :class="scrolled ? 'bg-slate-900/80 backdrop-blur-md shadow-lg shadow-slate-900/50' : 'bg-transparent'"
   >
-    <nav class="section flex items-center justify-between" aria-label="Main navigation">
+    <nav class="flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3" aria-label="Main navigation">
       <div class="flex items-center gap-2 text-xl font-bold">
         <span class="hidden sm:block text-slate-100">San Pila</span>
       </div>
