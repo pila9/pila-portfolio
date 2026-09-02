@@ -8,7 +8,6 @@ import Experience from '@/components/Experience.vue'
 import Certifications from '@/components/Certifications.vue'
 import Education from '@/components/Education.vue'
 import Contact from '@/components/Contact.vue'
-import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -25,7 +24,5 @@ import Footer from '@/components/Footer.vue'
       <Education />
       <Contact />
     </main>
-
-    <Footer />
   </div>
 </template>

@@ -1,17 +1,26 @@
 <script setup lang="ts">
-import { socialLinks } from '@/data/portfolioData'
+import { computed } from 'vue'
+import { socialLinks, personalInfo, contactInfo } from '@/data/portfolioData'
+
+const contactLinks = computed(() => contactInfo.filter((i) => i.href))
 </script>
 
 <template>
   <footer class="bg-slate-900 border-t border-slate-700/50">
-    <div class="container mx-auto section py-8 md:py-12">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-2 text-xl font-bold">
-          <span class="text-2xl text-emerald-400">&lt;JD /&gt;</span>
-          <span class="text-slate-300">John Doe</span>
-        </div>
+    <div class="container mx-auto section py-12 md:py-16">
+      <div class="text-center">
+        <p class="text-sm font-medium text-emerald-400 uppercase tracking-wider mb-4">
+          Connect
+        </p>
+        <h2 class="text-2xl font-bold text-slate-100 mb-2">
+          Let's connect
+        </h2>
+        <p class="text-slate-400 max-w-xl mx-auto mb-8">
+          Find me online — explore my code, professional background, or reach
+          out directly.
+        </p>
 
-        <nav aria-label="Social links" class="flex items-center gap-4">
+        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-8">
           <a
             v-for="link in socialLinks"
             :key="link.label"
@@ -19,19 +28,32 @@ import { socialLinks } from '@/data/portfolioData'
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="link.label"
-            class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-800/50 transition-all duration-200 group"
+            class="flex items-center gap-3 px-6 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-slate-300 hover:text-emerald-400 hover:border-emerald-400/50 transition-all duration-200 group"
           >
             <component
               :is="link.icon"
-              class="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
+              class="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform duration-200"
             />
+            <span>{{ link.label }}</span>
           </a>
-        </nav>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center text-sm text-slate-400">
+          <a
+            v-for="info in contactLinks"
+            :key="info.label"
+            :href="info.href"
+            class="flex items-center justify-center gap-2 hover:text-emerald-400 transition-colors"
+          >
+            <component :is="info.icon" class="w-4 h-4 text-emerald-400" />
+            <span>{{ info.value }}</span>
+          </a>
+        </div>
       </div>
 
       <div class="mt-8 pt-8 border-t border-slate-700/50 text-center text-sm text-slate-400">
         <p>
-          &copy; {{ new Date().getFullYear() }} John Doe. All rights reserved.
+          &copy; {{ new Date().getFullYear() }} {{ personalInfo.name }}. All rights reserved.
         </p>
         <p class="mt-2">
           Built with Vue 3, TypeScript &amp; Tailwind CSS

@@ -1,42 +1,24 @@
 <script setup lang="ts">
-import { personalInfo, productSkills, reference } from '@/data/portfolioData'
+import { personalInfo, roles, productSkills, reference } from '@/data/portfolioData'
 import { Mail, Phone } from '@lucide/vue'
 </script>
 
 <template>
-  <section id="about" class="section">
+  <section id="about" class="section pt-12 md:pt-20">
     <div class="container mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-slate-100 mb-4">About Me</h2>
+        <p class="text-sm font-medium text-emerald-400 uppercase tracking-wider mb-4">
+          About me
+        </p>
+        <h2 class="text-3xl font-bold text-slate-100 mb-4">Introduction</h2>
         <p class="text-slate-400 max-w-2xl mx-auto">
-          A brief background on who I am, what I do, and my core competencies.
+          {{ personalInfo.bio }}
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-12 items-start">
-        <!-- Profile Image -->
-        <div class="flex justify-center lg:justify-center">
-          <div class="relative">
-            <div
-              class="w-48 h-48 rounded-2xl overflow-hidden ring-4 ring-emerald-400/20 border-2 border-slate-700/50 shadow-lg"
-            >
-              <img
-                :src="personalInfo.profileImage"
-                :alt="personalInfo.name"
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div
-              class="absolute -bottom-3 -right-3 bg-emerald-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full"
-            >
-              {{ personalInfo.title }}
-            </div>
-          </div>
-        </div>
-
-        <!-- Bio & Reference -->
-        <div class="lg:col-span-2 space-y-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <!-- Left: Overview & Role Cards -->
+        <div class="space-y-8">
           <div class="space-y-4 text-slate-300">
             <p class="text-base leading-relaxed">
               {{ personalInfo.bioLong }}
@@ -49,88 +31,106 @@ import { Mail, Phone } from '@lucide/vue'
             </p>
           </div>
 
-          <!-- Reference -->
-          <div
-            class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300"
-          >
-            <h3 class="text-lg font-semibold text-slate-100 mb-2">Reference Available</h3>
-            <p class="text-slate-400 text-sm mb-3">{{ reference.relationship }}</p>
-            <div class="space-y-1">
-              <p class="font-medium text-slate-200">{{ reference.name }}</p>
-              <p class="text-slate-400 text-sm">
-                {{ reference.title }}<br />{{ reference.company }}
-              </p>
-              <div class="flex gap-4 text-sm text-slate-400 mt-2">
-                <a
-                  :href="`mailto:${reference.email}`"
-                  class="flex items-center gap-1 hover:text-emerald-400 transition-colors"
-                >
-                  <Mail class="w-4 h-4" />
-                  <span>Email</span>
-                </a>
-                <a
-                  :href="`tel:${reference.phone.replace(/\D/g, '')}`"
-                  class="flex items-center gap-1 hover:text-emerald-400 transition-colors"
-                >
-                  <Phone class="w-4 h-4" />
-                  <span>Phone</span>
-                </a>
+          <!-- Role Cards -->
+          <div class="grid sm:grid-cols-2 gap-4 pt-4">
+            <div
+              v-for="role in roles"
+              :key="role.id"
+              class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 hover:border-emerald-400/50 transition-all duration-300 group"
+            >
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                <component :is="role.icon" class="w-5 h-5 text-emerald-400" />
               </div>
+              <h3 class="text-lg font-semibold text-slate-100 mb-1 group-hover:text-emerald-400 transition-colors">
+                {{ role.title }}
+              </h3>
+              <p class="text-slate-400 text-sm">
+                {{ role.description }}
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Product Skills -->
-        <div class="space-y-6">
-          <div class="text-center lg:text-left">
-            <h3 class="text-xl font-semibold text-slate-100 mb-4">Product Skills</h3>
-            <p class="text-slate-400 text-sm mb-6">
-              Core product management competencies rated by proficiency.
-            </p>
-          </div>
-          <div class="space-y-6">
+        <!-- Right: Profile Image & Product Skills -->
+        <div class="space-y-10">
+          <!-- Profile -->
+          <div class="flex flex-col items-center text-center">
             <div
-              v-for="skill in productSkills"
-              :key="skill.id"
-              class="space-y-2"
+              class="relative mb-4"
             >
-              <div class="flex justify-between items-center">
-                <span class="text-slate-200 font-medium">{{ skill.name }}</span>
-                <span class="text-emerald-400 font-medium">{{ skill.level }}%</span>
-              </div>
-              <div class="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
-                <div
-                  class="bg-gradient-to-r from-emerald-500 to-cyan-400 h-2 rounded-full transition-all duration-500"
-                  :style="{ width: `${skill.level}%` }"
+              <div
+                class="w-48 h-48 rounded-full overflow-hidden ring-4 ring-emerald-400/20 border-4 border-slate-700/50 shadow-xl"
+              >
+                <img
+                  :src="personalInfo.profileImage"
+                  :alt="personalInfo.name"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
-              <p class="text-slate-400 text-xs">
-                {{ skill.description }}
-              </p>
             </div>
+            <h3 class="text-xl font-bold text-slate-100">
+              {{ personalInfo.name }}
+            </h3>
+            <p class="text-emerald-400">
+              {{ personalInfo.title }}
+            </p>
           </div>
 
-          <!-- Quick Stats -->
-          <div class="grid grid-cols-2 gap-4 pt-6">
-            <div
-              class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-emerald-400/50 transition-all duration-300 group"
-            >
-              <div class="text-3xl font-bold text-emerald-400 mb-1 group-hover:scale-110 transition-transform">
-                6+
-              </div>
-              <div class="text-sm text-slate-400">
-                Years Experience
+          <!-- Product Skills with progress bars -->
+          <div class="space-y-5">
+            <h3 class="text-lg font-semibold text-slate-200">
+              Product Skills
+            </h3>
+            <div class="space-y-4">
+              <div
+                v-for="skill in productSkills"
+                :key="skill.id"
+                class="space-y-2"
+              >
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-300 font-medium">{{ skill.name }}</span>
+                  <span class="text-emerald-400 font-medium">{{ skill.level }}%</span>
+                </div>
+                <div class="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
+                  <div
+                    class="bg-gradient-to-r from-emerald-500 to-cyan-400 h-2 rounded-full transition-all duration-500"
+                    :style="{ width: `${skill.level}%` }"
+                  />
+                </div>
               </div>
             </div>
-            <div
-              class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-emerald-400/50 transition-all duration-300 group"
-            >
-              <div class="text-3xl font-bold text-emerald-400 mb-1 group-hover:scale-110 transition-transform">
-                15+
-              </div>
-              <div class="text-sm text-slate-400">
-                Projects Delivered
-              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference -->
+      <div class="mt-12 pt-8 border-t border-slate-700/50">
+        <div class="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-slate-100 mb-2">
+            Reference Available
+          </h3>
+          <p class="text-slate-400 text-sm mb-3">{{ reference.relationship }}</p>
+          <div class="space-y-1">
+            <p class="font-medium text-slate-200">{{ reference.name }}</p>
+            <p class="text-slate-400 text-sm">
+              {{ reference.title }}<br />{{ reference.company }}
+            </p>
+            <div class="flex gap-4 text-sm text-slate-400 mt-2">
+              <a
+                :href="`mailto:${reference.email}`"
+                class="flex items-center gap-1 hover:text-emerald-400 transition-colors"
+              >
+                <Mail class="w-4 h-4" />
+                <span>Email</span>
+              </a>
+              <a
+                :href="`tel:${reference.phone.replace(/\D/g, '')}`"
+                class="flex items-center gap-1 hover:text-emerald-400 transition-colors"
+              >
+                <Phone class="w-4 h-4" />
+                <span>Phone</span>
+              </a>
             </div>
           </div>
         </div>

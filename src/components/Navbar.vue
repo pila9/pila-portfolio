@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { Download } from '@lucide/vue'
+import { resumeUrl } from '@/data/portfolioData'
 
 interface NavLink {
   label: string
@@ -9,10 +11,10 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Certifications', href: '#certifications' },
   { label: 'Education', href: '#education' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -72,8 +74,7 @@ const closeMenu = () => {
   >
     <nav class="section flex items-center justify-between" aria-label="Main navigation">
       <div class="flex items-center gap-2 text-xl font-bold">
-        <span class="text-2xl text-emerald-400">&lt;JD /&gt;</span>
-        <span class="hidden sm:block text-slate-100">John Doe</span>
+        <span class="hidden sm:block text-slate-100">San Pila</span>
       </div>
 
       <!-- Desktop Navigation -->
@@ -93,6 +94,17 @@ const closeMenu = () => {
           {{ link.label }}
         </a>
       </div>
+
+      <!-- Download CV Button -->
+      <a
+        :href="resumeUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden md:flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 font-medium rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-colors text-sm"
+      >
+        <Download class="w-4 h-4" />
+        CV
+      </a>
 
       <!-- Mobile Menu Button -->
       <button

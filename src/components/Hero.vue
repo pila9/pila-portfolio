@@ -1,37 +1,50 @@
 <script setup lang="ts">
 import { useSmoothScroll } from '@/composables/useSmoothScroll'
-import { personalInfo, socialLinks } from '@/data/portfolioData'
+import { personalInfo, socialLinks, techTags, resumeUrl } from '@/data/portfolioData'
+import { Download } from '@lucide/vue'
 
 const { scrollTo } = useSmoothScroll()
 </script>
 
 <template>
-  <section id="hero" class="section min-h-screen flex items-center justify-center pt-20">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-      <div class="text-center space-y-8">
-        <div class="space-y-4">
-          <p class="text-sm font-medium text-emerald-400 uppercase tracking-wider">
-            {{ personalInfo.title }}
-          </p>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-100">
-            <span class="block mb-2">Hi, I'm</span>
-            <span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-              {{ personalInfo.name }}, {{ personalInfo.title }}
-            </span>
-          </h1>
-        </div>
+  <section
+    id="hero"
+    class="section min-h-screen flex items-center justify-center pt-20 pb-16"
+  >
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div class="max-w-5xl mx-auto">
+        <!-- Intro label -->
+        <p class="text-sm font-medium text-emerald-400 uppercase tracking-wider mb-4">
+          {{ personalInfo.title }}
+        </p>
 
-        <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 mb-4">
+          <span class="block mb-2">Welcome to my portfolio</span>
+          <span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+            Hello, I'm {{ personalInfo.name }}
+          </span>
+          <span class="block mt-2 text-slate-300">👋</span>
+        </h1>
+
+        <!-- Role subtitle -->
+        <p class="text-xl text-slate-300 mb-6 max-w-3xl">
+          {{ personalInfo.tagline }}
+        </p>
+
+        <!-- Bio -->
+        <p class="text-lg text-slate-400 mb-8 max-w-2xl">
           {{ personalInfo.bio }}
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <!-- CTA buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
           <button
             type="button"
             @click="scrollTo('#projects')"
             class="px-8 py-3 bg-emerald-500 text-slate-900 font-semibold rounded-lg hover:bg-emerald-400 transition-all duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2"
           >
-            View Work
+            View My Work
           </button>
           <button
             type="button"
@@ -40,9 +53,30 @@ const { scrollTo } = useSmoothScroll()
           >
             Contact Me
           </button>
+          <a
+            :href="resumeUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-3 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-all duration-200 flex items-center justify-center gap-2"
+          >
+            <Download class="w-5 h-5" />
+            Download CV
+          </a>
         </div>
 
-        <div class="flex justify-center gap-6 pt-4">
+        <!-- Tech stack tags -->
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span
+            v-for="tech in techTags"
+            :key="tech"
+            class="px-4 py-2 text-sm font-medium text-slate-300 bg-slate-800/50 border border-slate-700/50 rounded-full hover:border-emerald-400/50 hover:text-emerald-400 transition-all duration-200"
+          >
+            {{ tech }}
+          </span>
+        </div>
+
+        <!-- Social links -->
+        <div class="flex gap-4">
           <a
             v-for="link in socialLinks"
             :key="link.label"
@@ -50,7 +84,7 @@ const { scrollTo } = useSmoothScroll()
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="link.label"
-            class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/50 border border-slate-700/50 text-slate-300 hover:text-emerald-400 hover:border-emerald-400/50 hover:bg-slate-800 transition-all duration-200 group"
+            class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/50 border border-slate-700/50 text-slate-300 hover:text-emerald-400 hover:border-emerald-400/50 transition-all duration-200 group"
           >
             <component
               :is="link.icon"

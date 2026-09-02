@@ -6,35 +6,39 @@ import { skillCategories } from '@/data/portfolioData'
   <section id="skills" class="section bg-slate-800/30">
     <div class="container mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-slate-100 mb-4">Skills & Expertise</h2>
+        <p class="text-sm font-medium text-emerald-400 uppercase tracking-wider mb-4">
+          Technical Expertise
+        </p>
+        <h2 class="text-3xl font-bold text-slate-100 mb-4">Skills</h2>
         <p class="text-slate-400 max-w-2xl mx-auto">
-          Technologies and tools I specialize in.
+          Technologies and tools I specialize in across the full development stack.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-8">
+      <div class="space-y-10">
         <div
           v-for="category in skillCategories"
           :key="category.title"
-          class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300 group"
+          class="space-y-4"
         >
-          <h3 class="text-xl font-semibold text-slate-100 mb-4 group-hover:text-emerald-400 transition-colors">
-            {{ category.title }}
-          </h3>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            <div
+          <div class="flex items-baseline justify-between">
+            <h3 class="text-xl font-semibold text-slate-200">
+              {{ category.title }}
+            </h3>
+            <span class="text-sm text-slate-500">
+              {{ category.skills.length }} technologies
+            </span>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span
               v-for="skill in category.skills"
               :key="skill.name"
-              class="flex flex-col items-center gap-2 bg-slate-900/50 border border-slate-700/30 rounded-lg p-3 hover:border-emerald-400/50 hover:bg-slate-900/70 transition-all duration-200"
+              class="px-4 py-2 text-sm font-medium text-slate-300 bg-slate-800/50 border border-slate-700/50 rounded-full hover:border-emerald-400/50 hover:text-emerald-400 transition-all duration-200 flex items-center gap-2"
             >
-              <component
-                :is="skill.icon"
-                class="w-6 h-6 text-emerald-400"
-              />
-              <span class="text-xs font-medium text-slate-300 text-center">
-                {{ skill.name }}
-              </span>
-            </div>
+              <component :is="skill.icon" class="w-4 h-4 text-emerald-400" />
+              <span>{{ skill.name }}</span>
+            </span>
           </div>
         </div>
       </div>

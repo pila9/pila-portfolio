@@ -9,6 +9,8 @@ import {
   LayoutDashboard,
   Users,
   Globe,
+  Package,
+  Target,
   Mail,
   MapPin,
   Phone,
@@ -18,6 +20,13 @@ import { GitHub, LinkedIn, Twitter } from '@/icons/brandIcons'
 export interface SocialLink {
   label: string
   href: string
+  icon: Component
+}
+
+export interface Role {
+  id: string
+  title: string
+  description: string
   icon: Component
 }
 
@@ -103,6 +112,52 @@ export const socialLinks: SocialLink[] = [
   { label: 'Twitter', href: 'https://x.com/sanpila', icon: Twitter },
   { label: 'Email', href: 'mailto:pilasan19@gmail.com', icon: Mail },
 ]
+
+export const roles: Role[] = [
+  {
+    id: 'product-owner',
+    title: 'Product Owner',
+    description:
+      'Lead product lifecycle from concept to launch, drive cross-functional teams, and deliver user-focused solutions.',
+    icon: Package,
+  },
+  {
+    id: 'frontend-developer',
+    title: 'Front-end Developer',
+    description:
+      'Build responsive, accessible web applications with Vue.js, React, and modern UI frameworks.',
+    icon: Code,
+  },
+  {
+    id: 'product-strategy',
+    title: 'Product Strategy',
+    description:
+      'Define product vision, roadmap priorities, and align feature development with business goals.',
+    icon: Target,
+  },
+  {
+    id: 'ui-ux',
+    title: 'UI/UX',
+    description:
+      'Design intuitive user interfaces, conduct user testing, and optimize the customer journey.',
+    icon: Palette,
+  },
+]
+
+export const techTags = [
+  'Vue.js',
+  'React.js',
+  'Nuxt.js',
+  'TypeScript',
+  'JavaScript',
+  'Tailwind CSS',
+  'Node.js',
+  'Laravel',
+  'MySQL',
+  'Git',
+]
+
+export const resumeUrl = '/cv.pdf'
 
 export const projects: Project[] = [
   {
@@ -419,7 +474,7 @@ export const personalInfo = {
   bioLong:
     "I'm a Product Owner and Front-end Developer based in Phnom Penh, Cambodia, with over 6 years of experience building web applications for fintech platforms and digital marketplaces. My expertise spans Vue.js, React, Nuxt.js, TypeScript, and Tailwind CSS, with a strong focus on performance, accessibility, and cross-functional product delivery.",
   email: 'pilasan19@gmail.com',
-  profileImage: '/pila.png',
+  profileImage: '/personalInfo/profileImage.png',
 }
 
 export const productSkills: ProductSkill[] = [
