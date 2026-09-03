@@ -590,25 +590,25 @@ export const productSkills: ProductSkill[] = [
   {
     id: 'strategic-thinking',
     name: 'Strategic Thinking & Vision',
-    level: 80,
+    level: 70,
     description: 'Defining product vision, roadmap priorities, and aligning feature development with business goals',
   },
   {
     id: 'communication',
     name: 'Communication & Collaboration',
-    level: 80,
+    level: 70,
     description: 'Cross-functional teamwork, stakeholder alignment, and clear technical/product communication',
   },
   {
     id: 'documentary',
     name: 'Documentation',
-    level: 80,
+    level: 70,
     description: 'User stories, acceptance criteria, project documentation, and process standardization',
   },
   {
     id: 'research',
     name: 'Research & Analysis',
-    level: 80,
+    level: 70,
     description: 'Market research, user analysis, feature iteration, and data-driven product decisions',
   },
 ]
