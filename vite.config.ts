@@ -3,8 +3,8 @@ import tailwind from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/pila-portfolio/',  // Add this line
   plugins: [tailwind(), vue()],
   resolve: {
     alias: {
