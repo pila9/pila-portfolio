@@ -184,7 +184,7 @@ export const techTags = [
   'Git',
 ]
 
-export const resumeUrl = '/cv.pdf'
+export const resumeUrl = '/San-Pila-CV.pdf'
 
 export const projects: Project[] = [
   {
