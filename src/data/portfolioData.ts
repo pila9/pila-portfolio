@@ -594,13 +594,13 @@ export const productSkills: ProductSkill[] = [
   {
     id: 'documentary',
     name: 'Documentation',
-    level: 70,
+    level: 60,
     description: 'User stories, acceptance criteria, project documentation, and process standardization',
   },
   {
     id: 'research',
     name: 'Research & Analysis',
-    level: 70,
+    level: 80,
     description: 'Market research, user analysis, feature iteration, and data-driven product decisions',
   },
 ]
