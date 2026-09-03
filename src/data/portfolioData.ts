@@ -3,7 +3,6 @@ import {
   Code,
   Server,
   Package,
-  Target,
   Mail,
   MapPin,
   Phone,
@@ -97,7 +96,7 @@ export interface ExperienceItem {
   location: string
   period: string
   description: string
-  achievements: string[]
+  achievements?: string[]
 }
 
 export interface ContactInfo {
@@ -142,31 +141,24 @@ export const socialLinks: SocialLink[] = [
 
 export const roles: Role[] = [
   {
-    id: 'product-manager',
-    title: 'Product Manager',
-    description:
-      'Define product vision, roadmap priorities, and align feature development with business goals.',
-    icon: Target,
-  },
-  {
     id: 'product-owner',
     title: 'Product Owner',
     description:
-      'Lead product lifecycle from concept to launch, drive cross-functional teams, and deliver user-focused solutions.',
+      'Gather and analyze business/user requirements and translate them into clear product requirements. Manage and prioritize Product Backlog, User Stories, and Acceptance Criteria based on business value and user needs. Collaborate with Design, Development, QA, and stakeholders to deliver digital products. Support Sprint Planning, Review, Demo, and UAT throughout the product lifecycle. Conduct research, analyze solutions, and prepare product documentation, reports, and presentations. Collect user feedback, monitor product performance, and drive continuous product improvement.',
     icon: Package,
   },
   {
     id: 'frontend-developer',
     title: 'Front-end Developer',
     description:
-      'Build responsive, accessible web applications with Vue.js, React, and modern UI frameworks.',
+      'Develop and maintain responsive, user-friendly web applications using React.js, JavaScript, HTML, and CSS. Build reusable and scalable UI components based on UI/UX designs and business requirements. Integrate REST APIs and work with backend teams to deliver functional web applications. Optimize application performance, usability, responsiveness, and cross-browser compatibility. Troubleshoot, debug, and fix frontend issues to ensure application quality and stability. Collaborate with Product, UI/UX, Backend, and QA teams throughout the development lifecycle.',
     icon: Code,
   },
   {
     id: 'web-developer',
     title: 'Web Developer',
     description:
-      'Develop and maintain web applications using modern technologies and best practices.',
+      'Develop, maintain, and enhance responsive and user-friendly websites and web applications. Build web interfaces using HTML, CSS, JavaScript, React.js, and other web technologies. Integrate REST APIs and work with backend services to deliver functional web solutions. Translate business and UI/UX requirements into practical web solutions. Troubleshoot, debug, and resolve technical issues to ensure website performance and stability. Optimize websites for performance, responsiveness, usability, and cross-browser compatibility. Collaborate with UI/UX, Product, Backend, QA, and other teams throughout the development lifecycle.',
     icon: Server,
   },
 ]
@@ -437,7 +429,7 @@ export const skillCategories: SkillCategory[] = [
 export const experiences: ExperienceItem[] = [
   {
     id: 'pm-fedev',
-    role: 'Product Manager / Front-end Developer',
+    role: 'Product Owner and Front-end Developer',
     company: 'Everlast & Apps Dev Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Jun 2022 — Present',
@@ -577,11 +569,11 @@ export const certificates: Certificate[] = [
 
 export const personalInfo = {
   name: 'San Pila',
-  title: 'Product Manager | Product Owner | Front-end Developer | Web Developer',
+  title: 'Product Owner | Front-end Developer | Web Developer',
   tagline: 'Building Scalable Web Applications & Digital Products',
-  bio: 'Product Manager and Frontend Developer with 8+ years of experience in software development, web applications, and digital products. Skilled in React.js, Vue.js, Nuxt.js, TypeScript, Node.js, PHP, Laravel, and MySQL, with strong background in Agile/Scrum, Jira, Git, testing, and deployment.',
+  bio: 'Product Owner and Frontend Developer with 8+ years of experience in software development, web applications, and digital products. Skilled in React.js, Vue.js, Nuxt.js, TypeScript, Node.js, PHP, Laravel, and MySQL, with strong background in Agile/Scrum, Jira, Git, testing, and deployment.',
   bioLong:
-    "I have more than 8 years of experience in software development, web applications, frontend development, and digital product development. Currently, I work as a Product Manager and Frontend Developer, combining technical expertise with product and business responsibilities.\n\nI have experience working with stakeholders and cross-functional teams to gather and analyze requirements, define product priorities, manage roadmaps and backlogs, plan sprints, and deliver digital products. I work closely with development teams to translate business and user needs into clear and practical solutions.\n\nWith my technical background in React.js, Vue.js, Nuxt.js, JavaScript, TypeScript, Node.js, PHP, Laravel, and MySQL, I can communicate effectively with technical teams and understand both business and development perspectives. I am also experienced with Agile/Scrum, Jira, Git, testing, debugging, and deployment.\n\nI am a motivated and adaptable professional who enjoys solving problems, improving products, and creating solutions that deliver value to both users and businesses.",
+    "I have more than 8 years of experience in software development, web applications, frontend development, and digital product development. Currently, I work as a Product Owner and Frontend Developer, combining technical expertise with product and business responsibilities.\n\nI have experience working with stakeholders and cross-functional teams to gather and analyze requirements, define product priorities, manage roadmaps and backlogs, plan sprints, and deliver digital products. I work closely with development teams to translate business and user needs into clear, practical, and valuable solutions.\n\nMy technical expertise includes React.js, Vue.js, Nuxt.js, JavaScript, TypeScript, Node.js, PHP, Laravel, and MySQL. This technical background allows me to communicate effectively with development teams and understand both business requirements and technical perspectives. I am also experienced in Agile/Scrum, Jira, Git, testing, debugging, and deployment.\n\nI am a motivated, adaptable, and solution-oriented professional who enjoys solving problems, improving digital products, and creating solutions that deliver value to both users and businesses.",
   email: 'pilasan19@gmail.com',
   profileImage: '/personalInfo/profileImage.png',
 }
