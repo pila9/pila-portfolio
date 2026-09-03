@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { projects } from '@/data/portfolioData'
-import { ExternalLink, FileText } from '@lucide/vue'
-import { GitHub } from '@/icons/brandIcons'
 </script>
 
 <template>
@@ -20,7 +18,7 @@ import { GitHub } from '@/icons/brandIcons'
 
       <div class="space-y-16">
         <div
-          v-for="(project, index) in projects"
+          v-for="project in projects"
           :key="project.id"
           class="group bg-slate-800/50 border border-slate-700/50 rounded-xl overflow-hidden hover:border-emerald-400/50 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300"
         >
@@ -36,7 +34,6 @@ import { GitHub } from '@/icons/brandIcons'
               <div
                 class="absolute top-4 left-4 text-3xl font-bold text-slate-100/30"
               >
-                {{ String(index + 1).padStart(2, '0') }}
               </div>
               <div
                 v-if="project.subtitle"

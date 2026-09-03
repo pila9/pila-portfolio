@@ -22,12 +22,6 @@ import { personalInfo, roles, productSkills } from '@/data/portfolioData'
             <p class="text-base leading-relaxed">
               {{ personalInfo.bioLong }}
             </p>
-            <p class="text-base leading-relaxed">
-              I'm passionate about creating clean, efficient, and accessible user
-              interfaces that solve real-world problems. When I'm not coding,
-              you can find me contributing to open-source projects or mentoring
-              developers in the community.
-            </p>
           </div>
 
           <!-- Role Cards -->

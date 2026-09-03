@@ -1,8 +1,6 @@
 import type { Component } from 'vue'
 import {
   Code,
-  Palette,
-  Database,
   Server,
   Package,
   Target,
@@ -191,12 +189,12 @@ export const resumeUrl = '/cv.pdf'
 export const projects: Project[] = [
   {
     id: 'umpay-admin',
-    title: 'UMPay Admin Web V2',
+    title: 'UMPay Admin Web',
     subtitle: 'Digital Wallet Operations Portal',
     description:
-      'A secure, role-based operations portal for managing the UMPay digital wallet and payment ecosystem. Enables internal teams to monitor business performance through a real-time dashboard, manage users and merchants, review KYC verification, oversee balances and transaction activity, configure payment channels and exchange rates, and handle gateway orders. Also supports financial reporting, exports, promotional tools, vouchers, agent management, banners, card settings, and operational appeal handling.',
+      'A secure, role-based operations portal for managing the UMPay digital wallet and payment ecosystem. It provides an analytics dashboard for member growth, transaction volume, balances, online activity, and top currencies; detailed user and merchant administration; KYC verification; deposits, withdrawals, payment methods, gateway orders, callback tracking, and exchange rates. Teams can also manage fee reports and Excel/PDF exports, promotions, vouchers, agents, banners, card settings, and operational appeals. Security includes role-based permissions, JWT authentication, Google 2FA, reCAPTCHA, and activity controls, with English, Thai, Chinese, Japanese, and Malay support.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Admin+Web',
-    techStack: ['Vue.js 2', 'Vue Router', 'Vuex', 'Element UI', 'Axios', 'ApexCharts', 'Vue I18n', 'Laravel 8'],
+    techStack: ['Vue.js 2', 'Vue Router', 'Vuex', 'Element UI', 'Axios', 'ApexCharts', 'Vue I18n', 'Laravel 8 REST APIs'],
     links: {
       live: 'https://umpay.com/admin',
       github: 'https://github.com/sanpila/umpay-admin',
@@ -208,9 +206,9 @@ export const projects: Project[] = [
     title: 'UMPay Payment Gateway Web',
     subtitle: 'Digital Wallet Checkout Portal',
     description:
-      'A customer-facing checkout portal that lets customers complete payments through the UMPay mobile wallet. When a merchant creates an order, the page securely retrieves transaction details and presents a QR code or mobile deep link. Customers can scan the code or open UMPay directly on mobile to pay. Shows order amount, currency, merchant, product, purchase-order number, and payment expiry countdown.',
+      'A customer-facing checkout portal for completing payments through the UMPay mobile wallet. It securely retrieves merchant order details and presents a QR code or mobile deep link, showing the amount, currency, merchant, product, purchase-order number, and payment-expiry countdown. The responsive desktop and mobile experience includes live payment-status updates via Pusher, success, failure, expired, and service-unavailable states, detailed digital receipts with invoice/reference information, merchant redirects after completion, and receipt image downloads and sharing.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Gateway',
-    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'QRCode React', 'Pusher', 'Webpack'],
+    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'QRCode React', 'Pusher', 'Webpack', 'Internal API/i18n'],
     links: {
       live: 'https://umpay.com/gateway',
       github: 'https://github.com/sanpila/umpay-gateway',
@@ -222,9 +220,9 @@ export const projects: Project[] = [
     title: 'UMPay Web',
     subtitle: 'Digital Wallet Customer App',
     description:
-      'The customer-facing web application for the UMPay digital wallet. Enables users to manage funds, make payments, transfer money, and access wallet services. Features include secure account access, wallet management, deposit/withdrawal flows, wallet-to-wallet and bank transfers, QR-code payments, currency exchange, KYC verification, card services, vouchers, and multilingual support.',
+      'The customer-facing web application for the UMPay digital wallet, enabling users to manage funds, make payments, transfer money, and access wallet services from a responsive browser interface. It includes secure registration, password recovery, PIN setup, and two-factor authentication; balances, bills, transaction records, and real-time notifications; deposit and withdrawal flows with fees, status tracking, and receipts; wallet-to-wallet, bank, UnionPay, and Alipay transfers; QR-code generation and scanning; currency exchange and multi-currency wallets; KYC and membership access; UMPay card management; vouchers, payment-account settings, customer service, and multilingual support.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Web',
-    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Recharts', 'Webpack'],
+    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'QR-code Libraries', 'Recharts', 'Webpack', 'Internal REST API/i18n/UI'],
     links: {
       live: 'https://umpay.com',
       github: 'https://github.com/sanpila/umpay-web',
@@ -236,9 +234,9 @@ export const projects: Project[] = [
     title: 'UMPay Landing Web',
     subtitle: 'Digital Wallet Marketing Website',
     description:
-      'The public-facing marketing website for the UMPay digital wallet platform. Introduces the product, explains core financial services, and guides visitors to register or download the mobile app. Features responsive product pages, visual walkthroughs, video tutorials, FAQs, and regional information for deposits, withdrawals, transfers, and buy/sell services.',
+      'The public marketing website for the UMPay digital wallet platform, introducing the product, explaining core financial services, and guiding visitors to register or download the mobile app. Its responsive product pages, visual walkthroughs, video tutorials, and FAQs cover wallet, payment, security, and transaction-management features, alongside dedicated pages for deposits, withdrawals, transfers, and buying/selling. The site also provides social and customer-support access, country and currency availability, English, Thai, and Chinese languages, and localized Terms & Conditions, Privacy Policy, and AML policies.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Landing',
-    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Webpack'],
+    techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Webpack', 'Internal UI/API/i18n'],
     links: {
       live: 'https://umpay.com/landing',
       github: 'https://github.com/sanpila/umpay-landing',
@@ -250,9 +248,9 @@ export const projects: Project[] = [
     title: 'Orkun Admin Web',
     subtitle: 'Marketplace Operations Dashboard',
     description:
-      'A centralized back-office platform for managing a service marketplace. Enables operations teams to oversee vendors, clients, services, orders, payments, promotions, and system settings from a responsive dashboard. Key capabilities include analytics, vendor management with KYC reviews, full order lifecycle management, service catalog, discounts, role-based administration, audit logs, and multilingual support.',
+      'A centralized, responsive back-office platform for managing a service marketplace. Operations teams can monitor date-based order and payment analytics; manage vendors, KYC reviews, and service assignments; review client profiles, addresses, cancellations, and support cases; and oversee the full order lifecycle, payment reviews, refunds, and printable records. It also manages the service catalogue, categories, attributes, recommendations, banners, announcements, discounts, promo codes, tax/VAT, currencies, payment percentages, app versions, role-based access, audit logs, real-time admin notifications, and multilingual content.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Admin',
-    techStack: ['Next.js', 'React', 'Material UI', 'Redux Toolkit', 'Axios', 'Laravel'],
+    techStack: ['Next.js', 'React', 'Material UI', 'Redux Toolkit', 'Axios', 'Charting Tools', 'Laravel Admin API'],
     links: {
       live: 'https://orkun-app.com/admin',
       github: 'https://github.com/sanpila/orkun-admin',
@@ -264,9 +262,9 @@ export const projects: Project[] = [
     title: 'Orkun Mini App Web',
     subtitle: 'Customer Booking Application',
     description:
-      'A mobile-first customer application for discovering, booking, and tracking on-demand services inside a host mobile environment. Features include browsing promotional banners and service categories, searching services, saving favorites, creating bookings with address selection, real-time order progress tracking, booking history, notifications, and web-to-native bridge controls.',
+      'A mobile-first customer application for discovering, booking, and tracking on-demand services inside a host mobile environment. Customers can browse promotional banners, categories, top services, and service details; search and save favourites; book services with options, quantities, personal details, and address selection; and manage saved addresses with map and current-location support. It provides real-time order-progress tracking, booking and payment histories, notifications, in-order vendor contact, and web-to-native bridge controls for location, navigation, and closing the embedded experience.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Mini+App',
-    techStack: ['React', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Webpack'],
+    techStack: ['React', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Webpack', 'REST API'],
     links: {
       live: 'https://orkun-app.com',
       github: 'https://github.com/sanpila/orkun-mini-app',
@@ -274,13 +272,24 @@ export const projects: Project[] = [
     certificate: '/certificates/orkun-project.pdf',
   },
   {
+    id: 'orkun-landing',
+    title: 'Orkun Landing Web',
+    subtitle: 'Home-Service Marketplace Website',
+    description:
+      'The public-facing website for Orkun, a Cambodia-based home-service marketplace connecting customers with trusted local providers. It explains how to find, compare, and book services such as cleaning, repairs, moving, air-conditioner servicing, and photography. The site highlights scheduled bookings, certified vendors, direct communication, secure deposits, real-time updates, and customer support, with app screenshots and download calls to action. It also includes the company mission and vision, contact information, privacy policy, terms and conditions, search and social metadata, a sitemap, and responsive layouts for desktop and mobile.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Landing',
+    techStack: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery', 'Swiper', 'Font Awesome'],
+    links: {},
+    certificate: '/certificates/orkun-project.pdf',
+  },
+  {
     id: 'ionecards',
     title: 'iOneCards E-Commerce Platform',
     subtitle: 'Cambodia E-Commerce Platform',
     description:
-      'A Cambodia-focused e-commerce web application connecting customers with products, merchants, promotions, vouchers, and rewards. Built as a multilingual Nuxt.js single-page application with PWA support, JWT authentication, and integration with external iOneCards API for product, cart, account, order, and payment operations.',
+      'A Cambodia-focused e-commerce and loyalty platform that connects customers with products, merchants, promotions, vouchers, and rewards. Customers can browse multi-merchant catalogues and stores, discover flash deals and popular products, save items, manage a cart, apply coupons, and complete single-product or multi-merchant orders through ABA Pay, cards, Wing, and Pi Pay, including full and down payments. Account features include authentication with Apple sign-in, order history, reward points, saved products, messages, reviews, followed merchants, profile updates, and help-centre support. The mobile-responsive, PWA-ready experience supports English and Khmer, analytics, and lazy-loaded media.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=iOneCards',
-    techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Tailwind CSS', 'Bootstrap'],
+    techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Axios', 'Bootstrap', 'Vue I18n', 'PWA', 'JWT Authentication', 'iOneCards API'],
     links: {
       live: 'https://ione-cards.com',
       github: 'https://github.com/sanpila/ionecards',
@@ -291,13 +300,34 @@ export const projects: Project[] = [
     title: 'Gorden Web',
     subtitle: 'Music & Audiobook Discovery',
     description:
-      'A multilingual, responsive web platform for browsing music, artists, albums, audiobooks, and top charts. Built with Nuxt.js and Vue.js, connected to the Gorden/E-Play mobile ecosystem via QR code sharing and deep links. Supports 30+ languages and is deployed as a Dockerized static site with Nginx.',
+      'A multilingual, responsive digital-entertainment platform for discovering music, artists, albums, top charts, new releases, and audiobooks, seamlessly connected with the Gorden/E-Play mobile ecosystem. Its large media catalogue is easy to explore across countries, genres, and content types. Users can search songs, artists, albums, and audiobooks; view detailed content pages; play audio; create collections; and share or continue content through QR codes and mobile deep links. It supports more than 30 languages and is deployed as a Dockerized static site with Nginx.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Gorden+Web',
-    techStack: ['Nuxt.js', 'Vue.js', 'Vuetify', 'Tailwind CSS', 'REST API'],
+    techStack: ['Nuxt.js', 'Vue.js', 'Vuetify', 'Vuex', 'REST API', 'Docker', 'Nginx'],
     links: {
       live: 'https://gorden.com',
       github: 'https://github.com/sanpila/gorden-web',
     },
+  },
+  {
+    id: 'voting-admin',
+    title: 'Voting Admin Web',
+    subtitle: 'Voting & Prediction Operations Dashboard',
+    description:
+      'A secure operations dashboard for managing a voting and prediction platform. Administrators can oversee the complete topic lifecycle—from preview and publishing through active voting, closing, settlement, and deletion—while monitoring user activity and financial game data. It includes role-based access, account and user management, report and appeal moderation, blacklists, maintenance controls, configurable whitelists, categories, tags, countries, languages, announcements, game settings, and payment/channel limits. Financial operations cover user bets, income, commissions, service fees, cashback, wallet balances, and balance adjustments in a scalable, multi-currency system with secure authentication and audit-friendly controls.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Voting+Admin',
+    techStack: ['React', 'TypeScript', 'Material UI', 'Node.js', 'TypeScript API', 'Multi-currency'],
+    links: {},
+    certificate: '/certificates/voting-music.pdf',
+  },
+  {
+    id: 'ofl-admin',
+    title: 'OFL Admin Web',
+    subtitle: 'Payments & Card Services Operations Platform',
+    description:
+      'A back-office platform for managing BusinessFlow digital-payment and card-services operations. It gives teams a centralized workspace to oversee users, KYC applications, issued-card requests, card stock, transactions, fees, currencies, content, and platform settings. Key capabilities include role-based access, secure administrator account controls, customer and KYC review workflows, card applications and transaction management, transaction-history reporting, configurable spending limits and fees, multilingual settings, announcements, banners, and maintenance-mode controls. Its modular, permission-aware design keeps day-to-day financial workflows secure, clear, and manageable.',
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=OFL+Admin',
+    techStack: ['React', 'TypeScript', 'React Router', 'Material UI', 'Tailwind CSS', 'Recharts', 'Webpack'],
+    links: {},
   },
   {
     id: 'chatwoot',
@@ -412,14 +442,20 @@ export const experiences: ExperienceItem[] = [
     location: 'Phnom Penh, Cambodia',
     period: 'Jun 2022 — Present',
     description:
-      'Led product direction for BusinessFlow (Orkun), a service marketplace connecting customers with verified local service providers. Built responsive web applications using Vue.js, Nuxt.js, and React.js. Spearheaded cross-functional collaboration between engineering, design, and operations teams.',
+      'Led product vision and frontend delivery for BusinessFlow (Orkun), a platform that empowers multiple business teams while improving backend efficiency. Developed and maintained dynamic web applications with Vue.js, Nuxt.js, and React.js, combining product strategy with high-performance, responsive, scalable implementation.',
     achievements: [
-      'Led end-to-end product lifecycle for Orkun marketplace – discovery, booking, vendor fulfillment, payment, and review – across customer, admin, and marketing platforms',
-      'Developed and maintained dynamic web applications using Vue.js, Nuxt.js, and React.js with focus on performance, responsiveness, and scalability',
-      'Conducted thorough testing, identified bugs, and performed regular maintenance to enhance application functionality and stability',
+      'Built, designed, and enhanced high-performance, responsive, and scalable web applications using Vue.js, Nuxt.js, and React.js',
+      'Led the product vision and strategy, defining roadmap priorities, refining the backlog, and aligning feature development with stakeholder needs',
+      'Managed the vision and execution of a platform solution that empowered multiple business teams and improved backend efficiency',
+      'Owned and prioritized the product backlog, defined user stories, and partnered with cross-functional teams to deliver high-quality features in sprints',
+      'Coordinated end-to-end product development, including sprint planning and backlog grooming',
+      'Defined KPIs, tracked delivery in Jira, and monitored post-deployment product metrics to guide feature iterations',
+      'Conducted systematic testing, debugging, and regular maintenance to improve application functionality, stability, and product quality',
+      'Improved functionality and user experience through feedback-driven iteration and user testing',
       'Applied SEO best practices to improve web visibility and traffic',
-      'Managed product backlog, defined user stories, and aligned feature development with stakeholder needs',
-      'Optimized team workflows using Jira (Agile task tracking) and GitLab (version control)',
+      'Collaborated with leadership in weekly stakeholder meetings, providing technical and product insights for decisions and project direction',
+      'Streamlined deployment processes by overseeing server integration and seamless product releases',
+      'Optimized team workflows with Jira for Agile task tracking and GitLab for version control, improving transparency and cross-functional efficiency',
     ],
   },
   {
@@ -431,7 +467,7 @@ export const experiences: ExperienceItem[] = [
     description:
       'Developed responsive web applications and e-commerce platforms. Worked extensively with Laravel, PHP, MySQL, Vue.js, Nuxt.js, and JavaScript. Also gained experience in Android development with Java and Kotlin.',
     achievements: [
-      'Built Nuxt.js e-commerce and loyalty platform for iOneCards with multilingual (English/Khmer) support and PWA capabilities',
+      'Built Nuxt.js e-commerce platform for iOneCards with multilingual (English/Khmer) support and PWA capabilities',
       'Designed and implemented custom web templates to meet client requirements, enhancing UX and project deliverables',
       'Applied SEO best practices and iterative user testing to improve website functionality and user experience',
       'Managed version control and project workflow using GitLab and Jira',
@@ -535,9 +571,9 @@ export const personalInfo = {
   name: 'San Pila',
   title: 'Product Manager | Product Owner | Front-end Developer | Web Developer',
   tagline: 'Building Scalable Web Applications & Digital Products',
-  bio: 'I build scalable, performant web applications using Vue.js, React, and TypeScript. As a Product Owner and Front-end Developer, I bridge engineering and business to deliver user-focused digital products.',
+  bio: 'Product Manager and Frontend Developer with 8+ years of experience in software development, web applications, and digital products. Skilled in React.js, Vue.js, Nuxt.js, TypeScript, Node.js, PHP, Laravel, and MySQL, with strong background in Agile/Scrum, Jira, Git, testing, and deployment.',
   bioLong:
-    "I'm a Product Owner and Front-end Developer based in Phnom Penh, Cambodia, with over 6 years of experience building web applications for fintech platforms and digital marketplaces. My expertise spans Vue.js, React, Nuxt.js, TypeScript, and Tailwind CSS, with a strong focus on performance, accessibility, and cross-functional product delivery.",
+    "I have more than 8 years of experience in software development, web applications, frontend development, and digital product development. Currently, I work as a Product Manager and Frontend Developer, combining technical expertise with product and business responsibilities.\n\nI have experience working with stakeholders and cross-functional teams to gather and analyze requirements, define product priorities, manage roadmaps and backlogs, plan sprints, and deliver digital products. I work closely with development teams to translate business and user needs into clear and practical solutions.\n\nWith my technical background in React.js, Vue.js, Nuxt.js, JavaScript, TypeScript, Node.js, PHP, Laravel, and MySQL, I can communicate effectively with technical teams and understand both business and development perspectives. I am also experienced with Agile/Scrum, Jira, Git, testing, debugging, and deployment.\n\nI am a motivated and adaptable professional who enjoys solving problems, improving products, and creating solutions that deliver value to both users and businesses.",
   email: 'pilasan19@gmail.com',
   profileImage: '/personalInfo/profileImage.png',
 }

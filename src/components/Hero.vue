@@ -20,11 +20,13 @@ const { scrollTo } = useSmoothScroll()
 
         <!-- Headline -->
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 mb-4">
-          <span class="block mb-2">Welcome to my portfolio</span>
-          <span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-            Hello, I'm {{ personalInfo.name }}
+          <span class="block mb-2">
+            Welcome
+            <span class="wave inline-block text-emerald-400" aria-label="Waving hello" role="img">👋</span>
           </span>
-          <span class="block mt-2 text-slate-300">👋</span>
+          <span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+            I'm {{ personalInfo.name }}
+          </span>
         </h1>
 
         <!-- Role subtitle -->
