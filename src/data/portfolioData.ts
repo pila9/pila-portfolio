@@ -286,9 +286,9 @@ export const projects: Project[] = [
   {
     id: 'ionecards',
     title: 'iOneCards E-Commerce Platform',
-    subtitle: 'Cambodia E-Commerce Platform',
+    subtitle: 'E-Commerce Platform',
     description:
-      'A Cambodia-focused e-commerce and loyalty platform that connects customers with products, merchants, promotions, vouchers, and rewards. Customers can browse multi-merchant catalogues and stores, discover flash deals and popular products, save items, manage a cart, apply coupons, and complete single-product or multi-merchant orders through ABA Pay, cards, Wing, and Pi Pay, including full and down payments. Account features include authentication with Apple sign-in, order history, reward points, saved products, messages, reviews, followed merchants, profile updates, and help-centre support. The mobile-responsive, PWA-ready experience supports English and Khmer, analytics, and lazy-loaded media.',
+      'A Cambodia-focused e-commerce platform that connects customers with products, merchants, promotions, vouchers, and rewards. Customers can browse multi-merchant catalogues and stores, discover flash deals and popular products, save items, manage a cart, apply coupons, and complete single-product or multi-merchant orders through ABA Pay, cards, Wing, and Pi Pay, including full and down payments. Account features include authentication with Apple sign-in, order history, reward points, saved products, messages, reviews, followed merchants, profile updates, and help-centre support. The mobile-responsive, PWA-ready experience supports English and Khmer, analytics, and lazy-loaded media.',
     image: '/projects/ionecards.png',
     techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Axios', 'Bootstrap', 'Vue I18n', 'PWA', 'JWT Authentication', 'iOneCards API'],
     links: {
@@ -563,7 +563,7 @@ export const contactInfo: ContactInfo[] = [
   { label: 'Phone', value: '0856 421 82', href: 'tel:+85585642182', icon: Phone },
   { label: 'Telegram', value: 'Pila Sann', href: 'https://t.me/pilasan19', icon: Telegram },
   { label: 'LinkedIn', value: 'pila San', href: 'https://linkedin.com/in/sanpila', icon: LinkedIn },
-  { label: 'Location', value: 'Chamkar, Russia Keo, Phnom Penh, Cambodia', icon: MapPin },
+  { label: 'Location', value: 'Chrang ChamresII,Russey Keo, Phnom Penh', icon: MapPin },
 ]
 
 export const certificates: Certificate[] = [
