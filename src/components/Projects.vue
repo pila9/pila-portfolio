@@ -24,11 +24,13 @@ import { projects } from '@/data/portfolioData'
         >
           <div class="grid lg:grid-cols-2 gap-0">
             <!-- Image -->
-            <div class="relative aspect-[16/9] lg:aspect-auto lg:h-full overflow-hidden">
+           <div
+             v-if="project.image"
+             class="relative aspect-[16/9] lg:aspect-auto lg:h-full overflow-hidden">
               <img
                 :src="project.image"
                 :alt="project.title"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                class="w-full h-full object-contain transition-transform duration-500"
                 loading="lazy"
               />
               <div
@@ -44,7 +46,12 @@ import { projects } from '@/data/portfolioData'
             </div>
 
             <!-- Content -->
-            <div class="p-8 space-y-5">
+            <div
+              :class="[
+                'p-8 space-y-5',
+                project.image ? 'lg:col-span-1' : 'lg:col-span-2',
+              ]"
+            >
               <div>
                 <div class="flex items-baseline gap-3 mb-1">
                   <h3
@@ -70,6 +77,57 @@ import { projects } from '@/data/portfolioData'
                 >
                   {{ tech }}
                 </span>
+              </div>
+
+              <div
+                v-if="project.privacy"
+                class="flex items-center gap-4 pt-2"
+              >
+                <span
+                  class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-300 bg-slate-900/50 border border-slate-700/50 rounded-lg"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 15V17M12 11V13M18 12C18 19 12 21 12 21C12 21 6 19 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12Z"
+                      stroke="#94a3bc"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  It's Privacy
+                </span>
+              </div>
+              <div
+                v-else-if="project.links?.live"
+                class="flex items-center gap-4 pt-2"
+              >
+                <a
+                  :href="project.links.live"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-amber-500/20 border border-amber-400/30 rounded-lg hover:bg-amber-500/30 transition-colors"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 13H12V19L19.995 12 L12 5V11H18V13Z"
+                      fill="#FBBF24"
+                    />
+                  </svg>
+                  {{ project.buttonText || 'View Project' }}
+                </a>
               </div>
             </div>
           </div>

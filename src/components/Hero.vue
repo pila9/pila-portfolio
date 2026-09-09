@@ -7,10 +7,7 @@ const { scrollTo } = useSmoothScroll()
 </script>
 
 <template>
-  <section
-    id="hero"
-    class="section min-h-screen flex items-center justify-center"
-  >
+  <section id="hero" class="flex items-center justify-center">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
       <div class="max-w-5xl mx-auto">
         <!-- Intro label -->
@@ -24,7 +21,8 @@ const { scrollTo } = useSmoothScroll()
             Welcome
             <span class="wave inline-block text-emerald-400" aria-label="Waving hello" role="img">👋</span>
           </span>
-          <span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+          <span
+            class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
             I'm {{ personalInfo.name }}
           </span>
         </h1>
@@ -39,25 +37,16 @@ const { scrollTo } = useSmoothScroll()
           {{ personalInfo.bio }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-          <button
-            type="button"
-            @click="scrollTo('#projects')"
-            class="px-8 py-3 bg-emerald-500 text-slate-900 font-semibold rounded-lg hover:bg-emerald-400 transition-all duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2"
-          >
+          <button type="button" @click="scrollTo('#projects')"
+            class="px-8 py-3 bg-emerald-500 text-slate-900 font-semibold rounded-lg hover:bg-emerald-400 transition-all duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2">
             View My Work
           </button>
-          <button
-            type="button"
-            @click="scrollTo('#contact')"
-            class="px-8 py-3 border-2 border-slate-600 text-slate-200 font-semibold rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-all duration-200 flex items-center justify-center gap-2"
-          >
+          <button type="button" @click="scrollTo('#contact')"
+            class="px-8 py-3 border-2 border-slate-600 text-slate-200 font-semibold rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-all duration-200 flex items-center justify-center gap-2">
             Contact Me
           </button>
-          <a
-            :href="resumeUrl"
-            download="Pila-San-CV.pdf"
-            class="px-8 py-3 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-all duration-200 flex items-center justify-center gap-2"
-          >
+          <a :href="resumeUrl" download="San-Pila-CV.pdf"
+            class="px-8 py-3 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition-all duration-200 flex items-center justify-center gap-2">
             <Download class="w-5 h-5" />
             Download CV
           </a>

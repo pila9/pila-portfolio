@@ -70,8 +70,10 @@ export interface Project {
   title: string
   subtitle: string
   description: string
-  image: string
+  image?: string
   techStack: string[]
+  privacy?: boolean
+  buttonText?: string
   links: {
     live?: string
     github?: string
@@ -129,7 +131,7 @@ export interface EducationItem {
   period: string
   description?: string
   achievements?: string[]
-  type: 'degree' | 'training' | 'course'
+  type: 'degree' | 'training' | 'course' | 'high-school'
 }
 
 export const socialLinks: SocialLink[] = [
@@ -144,7 +146,7 @@ export const roles: Role[] = [
     id: 'product-owner',
     title: 'Product Owner',
     description:
-      'Gather and analyze business/user requirements and translate them into clear product requirements. Manage and prioritize Product Backlog, User Stories, and Acceptance Criteria based on business value and user needs. Collaborate with Design, Development, QA, and stakeholders to deliver digital products. Support Sprint Planning, Review, Demo, and UAT throughout the product lifecycle. Conduct research, analyze solutions, and prepare product documentation, reports, and presentations. Collect user feedback, monitor product performance, and drive continuous product improvement.',
+      'Developed and maintained dynamic, responsive web applications using Vue.js, Nuxt.js, and React.js, with a focus on performance, scalability, and user experience. Translated business and user needs into clear product requirements, user stories, and acceptance criteria. Drove product vision and strategy, including roadmap planning, backlog management, and feature prioritization based on stakeholder and user needs. Managed and prioritized the Product Backlog and coordinated end-to-end product delivery through Agile/Scrum sprints. Collaborated with stakeholders, UI/UX designers, developers, QA, and technical teams to deliver high-quality product features. Conducted testing, debugging, maintenance, and performance optimization to improve application quality, stability, and usability. Integrated web applications with REST APIs and coordinated server integration and product deployments. Used Jira and GitLab for Agile task management, collaboration, version control, and development workflows. Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs. Applied SEO best practices to improve website visibility, usability, and traffic. Participated in stakeholder meetings, providing both product and technical insights to support decision-making and product direction.',
     icon: Package,
   },
   {
@@ -185,8 +187,9 @@ export const projects: Project[] = [
     subtitle: 'Digital Wallet Operations Portal',
     description:
       'A secure, role-based operations portal for managing the UMPay digital wallet and payment ecosystem. It provides an analytics dashboard for member growth, transaction volume, balances, online activity, and top currencies; detailed user and merchant administration; KYC verification; deposits, withdrawals, payment methods, gateway orders, callback tracking, and exchange rates. Teams can also manage fee reports and Excel/PDF exports, promotions, vouchers, agents, banners, card settings, and operational appeals. Security includes role-based permissions, JWT authentication, Google 2FA, reCAPTCHA, and activity controls, with English, Thai, Chinese, Japanese, and Malay support.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Admin+Web',
+    image: '/projects/umpay-admin.png',
     techStack: ['Vue.js 2', 'Vue Router', 'Vuex', 'Element UI', 'Axios', 'ApexCharts', 'Vue I18n', 'Laravel 8 REST APIs'],
+    privacy: true,
     links: {
       live: 'https://umpay.com/admin',
       github: 'https://github.com/sanpila/umpay-admin',
@@ -201,6 +204,7 @@ export const projects: Project[] = [
       'A customer-facing checkout portal for completing payments through the UMPay mobile wallet. It securely retrieves merchant order details and presents a QR code or mobile deep link, showing the amount, currency, merchant, product, purchase-order number, and payment-expiry countdown. The responsive desktop and mobile experience includes live payment-status updates via Pusher, success, failure, expired, and service-unavailable states, detailed digital receipts with invoice/reference information, merchant redirects after completion, and receipt image downloads and sharing.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Gateway',
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'QRCode React', 'Pusher', 'Webpack', 'Internal API/i18n'],
+    privacy: true,
     links: {
       live: 'https://umpay.com/gateway',
       github: 'https://github.com/sanpila/umpay-gateway',
@@ -215,6 +219,7 @@ export const projects: Project[] = [
       'The customer-facing web application for the UMPay digital wallet, enabling users to manage funds, make payments, transfer money, and access wallet services from a responsive browser interface. It includes secure registration, password recovery, PIN setup, and two-factor authentication; balances, bills, transaction records, and real-time notifications; deposit and withdrawal flows with fees, status tracking, and receipts; wallet-to-wallet, bank, UnionPay, and Alipay transfers; QR-code generation and scanning; currency exchange and multi-currency wallets; KYC and membership access; UMPay card management; vouchers, payment-account settings, customer service, and multilingual support.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Web',
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'QR-code Libraries', 'Recharts', 'Webpack', 'Internal REST API/i18n/UI'],
+    privacy: true,
     links: {
       live: 'https://umpay.com',
       github: 'https://github.com/sanpila/umpay-web',
@@ -227,7 +232,7 @@ export const projects: Project[] = [
     subtitle: 'Digital Wallet Marketing Website',
     description:
       'The public marketing website for the UMPay digital wallet platform, introducing the product, explaining core financial services, and guiding visitors to register or download the mobile app. Its responsive product pages, visual walkthroughs, video tutorials, and FAQs cover wallet, payment, security, and transaction-management features, alongside dedicated pages for deposits, withdrawals, transfers, and buying/selling. The site also provides social and customer-support access, country and currency availability, English, Thai, and Chinese languages, and localized Terms & Conditions, Privacy Policy, and AML policies.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=UMPay+Landing',
+    image: '/projects/umpay-landing.png',
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Webpack', 'Internal UI/API/i18n'],
     links: {
       live: 'https://umpay.com/landing',
@@ -241,8 +246,9 @@ export const projects: Project[] = [
     subtitle: 'Marketplace Operations Dashboard',
     description:
       'A centralized, responsive back-office platform for managing a service marketplace. Operations teams can monitor date-based order and payment analytics; manage vendors, KYC reviews, and service assignments; review client profiles, addresses, cancellations, and support cases; and oversee the full order lifecycle, payment reviews, refunds, and printable records. It also manages the service catalogue, categories, attributes, recommendations, banners, announcements, discounts, promo codes, tax/VAT, currencies, payment percentages, app versions, role-based access, audit logs, real-time admin notifications, and multilingual content.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Admin',
+    image: '/projects/orkun-admin.svg',
     techStack: ['Next.js', 'React', 'Material UI', 'Redux Toolkit', 'Axios', 'Charting Tools', 'Laravel Admin API'],
+    privacy: true,
     links: {
       live: 'https://orkun-app.com/admin',
       github: 'https://github.com/sanpila/orkun-admin',
@@ -255,8 +261,9 @@ export const projects: Project[] = [
     subtitle: 'Customer Booking Application',
     description:
       'A mobile-first customer application for discovering, booking, and tracking on-demand services inside a host mobile environment. Customers can browse promotional banners, categories, top services, and service details; search and save favourites; book services with options, quantities, personal details, and address selection; and manage saved addresses with map and current-location support. It provides real-time order-progress tracking, booking and payment histories, notifications, in-order vendor contact, and web-to-native bridge controls for location, navigation, and closing the embedded experience.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Mini+App',
+    image: '/projects/orkun-mini-app.png',
     techStack: ['React', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'Webpack', 'REST API'],
+    buttonText: 'Available on ABA App',
     links: {
       live: 'https://orkun-app.com',
       github: 'https://github.com/sanpila/orkun-mini-app',
@@ -269,9 +276,11 @@ export const projects: Project[] = [
     subtitle: 'Home-Service Marketplace Website',
     description:
       'The public-facing website for Orkun, a Cambodia-based home-service marketplace connecting customers with trusted local providers. It explains how to find, compare, and book services such as cleaning, repairs, moving, air-conditioner servicing, and photography. The site highlights scheduled bookings, certified vendors, direct communication, secure deposits, real-time updates, and customer support, with app screenshots and download calls to action. It also includes the company mission and vision, contact information, privacy policy, terms and conditions, search and social metadata, a sitemap, and responsive layouts for desktop and mobile.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Orkun+Landing',
+    image: '/projects/orkun-landing.png',
     techStack: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery', 'Swiper', 'Font Awesome'],
-    links: {},
+    links: {
+      live: 'https://orkun.app/',
+    },
     certificate: '/certificates/orkun-project.pdf',
   },
   {
@@ -280,11 +289,23 @@ export const projects: Project[] = [
     subtitle: 'Cambodia E-Commerce Platform',
     description:
       'A Cambodia-focused e-commerce and loyalty platform that connects customers with products, merchants, promotions, vouchers, and rewards. Customers can browse multi-merchant catalogues and stores, discover flash deals and popular products, save items, manage a cart, apply coupons, and complete single-product or multi-merchant orders through ABA Pay, cards, Wing, and Pi Pay, including full and down payments. Account features include authentication with Apple sign-in, order history, reward points, saved products, messages, reviews, followed merchants, profile updates, and help-centre support. The mobile-responsive, PWA-ready experience supports English and Khmer, analytics, and lazy-loaded media.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=iOneCards',
+    image: '/projects/ionecards.png',
     techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Axios', 'Bootstrap', 'Vue I18n', 'PWA', 'JWT Authentication', 'iOneCards API'],
     links: {
-      live: 'https://ione-cards.com',
-      github: 'https://github.com/sanpila/ionecards',
+      live: 'https://www.ionecards.com/',
+      github: '',
+    },
+  },
+  {
+    id: 'ionecloud',
+    title: 'iOneCloud',
+    subtitle: 'Cloud Computing & Tech Solutions',
+    description:
+      'iOneCloud is Cambodia\'s premier cloud service provider, part of the iOne Group. It offers elastic cloud computing products including Elastic Cloud Server (ECS), Elastic IP Address (EIP), Cloud Server Backup Service (CSBS), Elastic Volume Service (EVS), Virtual Private Cloud (VPC), Virtual Firewall (vFW), Security Groups, and Virtual Private Network (VPN). Technology solutions include iOneGPT AI chatbot, SAP ERP hosting, DBaaS, and cPanel web hosting, serving enterprise customers with secure, reliable cloud infrastructure.',
+    image: '/projects/ionecloud.png',
+    techStack: ['WordPress', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
+    links: {
+      live: 'https://ionecloud.com.kh/',
     },
   },
   {
@@ -295,6 +316,7 @@ export const projects: Project[] = [
       'A multilingual, responsive digital-entertainment platform for discovering music, artists, albums, top charts, new releases, and audiobooks, seamlessly connected with the Gorden/E-Play mobile ecosystem. Its large media catalogue is easy to explore across countries, genres, and content types. Users can search songs, artists, albums, and audiobooks; view detailed content pages; play audio; create collections; and share or continue content through QR codes and mobile deep links. It supports more than 30 languages and is deployed as a Dockerized static site with Nginx.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Gorden+Web',
     techStack: ['Nuxt.js', 'Vue.js', 'Vuetify', 'Vuex', 'REST API', 'Docker', 'Nginx'],
+    privacy: true,
     links: {
       live: 'https://gorden.com',
       github: 'https://github.com/sanpila/gorden-web',
@@ -308,6 +330,7 @@ export const projects: Project[] = [
       'A secure operations dashboard for managing a voting and prediction platform. Administrators can oversee the complete topic lifecycle—from preview and publishing through active voting, closing, settlement, and deletion—while monitoring user activity and financial game data. It includes role-based access, account and user management, report and appeal moderation, blacklists, maintenance controls, configurable whitelists, categories, tags, countries, languages, announcements, game settings, and payment/channel limits. Financial operations cover user bets, income, commissions, service fees, cashback, wallet balances, and balance adjustments in a scalable, multi-currency system with secure authentication and audit-friendly controls.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Voting+Admin',
     techStack: ['React', 'TypeScript', 'Material UI', 'Node.js', 'TypeScript API', 'Multi-currency'],
+    privacy: true,
     links: {},
     certificate: '/certificates/voting-music.pdf',
   },
@@ -319,6 +342,7 @@ export const projects: Project[] = [
       'A back-office platform for managing BusinessFlow digital-payment and card-services operations. It gives teams a centralized workspace to oversee users, KYC applications, issued-card requests, card stock, transactions, fees, currencies, content, and platform settings. Key capabilities include role-based access, secure administrator account controls, customer and KYC review workflows, card applications and transaction management, transaction-history reporting, configurable spending limits and fees, multilingual settings, announcements, banners, and maintenance-mode controls. Its modular, permission-aware design keeps day-to-day financial workflows secure, clear, and manageable.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=OFL+Admin',
     techStack: ['React', 'TypeScript', 'React Router', 'Material UI', 'Tailwind CSS', 'Recharts', 'Webpack'],
+    privacy: true,
     links: {},
   },
   {
@@ -329,6 +353,7 @@ export const projects: Project[] = [
       'An open-source, self-hosted customer engagement platform that centralizes messages from web chat, email, WhatsApp, social media, and APIs into a shared inbox. Contributed to the Vue.js frontend with real-time Action Cable integration, deployed with Docker on DigitalOcean/Kubernetes.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Chatwoot',
     techStack: ['Vue.js', 'Ruby on Rails', 'Action Cable', 'Docker', 'TypeScript'],
+    privacy: true,
     links: {
       live: 'https://chatwoot.org',
       github: 'https://github.com/sanpila/chatwoot',
@@ -433,21 +458,21 @@ export const experiences: ExperienceItem[] = [
     company: 'Everlast & Apps Dev Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Jun 2022 — Present',
-    description:
-      'Led product vision and frontend delivery for BusinessFlow (Orkun), a platform that empowers multiple business teams while improving backend efficiency. Developed and maintained dynamic web applications with Vue.js, Nuxt.js, and React.js, combining product strategy with high-performance, responsive, scalable implementation.',
+    description: '',
     achievements: [
-      'Built, designed, and enhanced high-performance, responsive, and scalable web applications using Vue.js, Nuxt.js, and React.js',
-      'Led the product vision and strategy, defining roadmap priorities, refining the backlog, and aligning feature development with stakeholder needs',
-      'Managed the vision and execution of a platform solution that empowered multiple business teams and improved backend efficiency',
+      'Developed and maintained dynamic, responsive web applications using Vue.js, Nuxt.js, and React.js, with a focus on performance, scalability, and user experience.',
+      'Translated business and user needs into clear product requirements, user stories, and acceptance criteria.',
+      'Drove product vision and strategy, including roadmap planning, backlog management, and feature prioritization based on stakeholder and user needs.',
       'Owned and prioritized the product backlog, defined user stories, and partnered with cross-functional teams to deliver high-quality features in sprints',
       'Coordinated end-to-end product development, including sprint planning and backlog grooming',
-      'Defined KPIs, tracked delivery in Jira, and monitored post-deployment product metrics to guide feature iterations',
+      'Defined KPIs, tracked delivery in Jira, and monitored post-deployment product metrics to guide feature iteration and improvements',
       'Conducted systematic testing, debugging, and regular maintenance to improve application functionality, stability, and product quality',
       'Improved functionality and user experience through feedback-driven iteration and user testing',
-      'Applied SEO best practices to improve web visibility and traffic',
+      'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
       'Collaborated with leadership in weekly stakeholder meetings, providing technical and product insights for decisions and project direction',
       'Streamlined deployment processes by overseeing server integration and seamless product releases',
-      'Optimized team workflows with Jira for Agile task tracking and GitLab for version control, improving transparency and cross-functional efficiency',
+      'Used Jira and GitLab for Agile task management, collaboration, version control, and development workflows.',
+      'Applied SEO best practices to improve web visibility and traffic',
     ],
   },
   {
@@ -456,8 +481,7 @@ export const experiences: ExperienceItem[] = [
     company: 'iOne Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Jan 2020 — May 2022',
-    description:
-      'Developed and maintained high-performance, responsive web applications with Laravel, PHP, MySQL, JavaScript, jQuery, Ajax, HTML/CSS3, Bootstrap, and Nuxt.js. Also contributed to Android development with Java and Kotlin, covering database analysis and design, testing, and continuous user-experience improvements.',
+    description: '',
     achievements: [
       'Built, designed, developed, and modified responsive web applications with Laravel, PHP, MySQL, JavaScript, jQuery, Ajax, HTML/CSS3, Bootstrap, and Nuxt.js',
       'Built the Nuxt.js iOneCards e-commerce platform with English and Khmer support and PWA capabilities',
@@ -466,7 +490,8 @@ export const experiences: ExperienceItem[] = [
       'Analyzed and designed databases to support application requirements and reliable data operations',
       'Conducted testing, identified bugs and errors, and performed maintenance to improve application functionality and stability',
       'Improved website functionality and user experience through iterative feedback, user testing, and bug resolution',
-      'Applied search engine optimization best practices to improve web visibility and traffic',
+      'Applied SEO best practices to improve web visibility and traffic',
+      'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
       'Used GitLab for version control, code quality, and collaboration, and Jira for task tracking, project management, and workflow optimization',
     ],
   },
@@ -476,17 +501,18 @@ export const experiences: ExperienceItem[] = [
     company: 'Second Chance Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'May 2018 — Dec 2019',
-    description:
-      'Developed web applications using ASP.NET MVC, ASP.NET Core, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap. Contributed to blockchain payment workflows using MetaMask and MyEtherWallet, while supporting custom templates, deployment, testing, and ongoing product improvements.',
+    description: ' ',
     achievements: [
       'Developed and maintained web applications with ASP.NET MVC, ASP.NET Core, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap',
       'Implemented blockchain payment transactions using MetaMask and MyEtherWallet',
       'Created custom web templates to meet project requirements and improve user experience',
-      'Collaborated with the team, providing technical and product insights to guide decisions and project direction',
       'Maintained and improved website functionality through iterative feedback and user testing',
       'Tested web applications, identified bugs and errors, and delivered fixes to improve stability',
-      'Used GitLab for version control, code quality, and collaboration; optimized workflows with Jira for Agile tracking and GitHub for version control',
-      'Oversaw server deployments to ensure seamless integration and reliable operation',
+      'Used GitLab for version control, code quality, and collaboration; optimized workflows.',
+      'Maintain and improve website functionality and user experience through iterative feedback and user testing.',
+      'Utilize GitLab for version control and project management, maintaining code quality and collaboration.',
+      'Oversee project deployment to the server, ensuring seamless integration and operation.',
+      'Test and finding out bug / error all web application',
       'Contributed to blockchain projects, attended an Intel IoT workshop in Malaysia, and interviewed candidates',
     ],
   },
@@ -496,8 +522,7 @@ export const experiences: ExperienceItem[] = [
     company: 'Lastmile Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Apr 2017 — Apr 2018',
-    description:
-      'Spearheaded end-to-end development of 2D/3D applications (Mobile/Windows) and Mixed Reality (VR) experiences. Led UI/UX design for immersive environments, creating intuitive interfaces and animations to enhance user engagement.',
+    description: '',
     achievements: [
       'Led full lifecycle development of 2D/3D applications for Mobile and Windows platforms',
       'Designed UI/UX for immersive VR environments with intuitive interfaces and animations',
@@ -508,15 +533,27 @@ export const experiences: ExperienceItem[] = [
   {
     id: 'ecommerce-freelance',
     role: 'E-Commerce & Digital Product Development',
-    company: 'Not on University',
+    company: 'Norton University',
     location: 'Phnom Penh, Cambodia',
     period: 'Sep 2016 — Sep 2016',
-    description:
-      'Led end-to-end development of Angkor Color Construction online shop and an exhibition website. Designed customer-centric e-commerce platform to drive sales and user engagement.',
+    description: ' ',
     achievements: [
       'Led end-to-end development of online e-commerce platform for Angkor Color Construction',
       'Built and optimized exhibition website to showcase products, improve brand visibility, and generate leads',
       'Collaborated with marketing and sales teams to align web features with business objectives',
+    ],
+  },
+  {
+    id: 'game-freelance',
+    role: 'Mobile Game Development & Product Strategy ',
+    company: 'Norton University',
+    location: 'Phnom Penh, Cambodia',
+    period: 'Oct 2015 — Oct 2015',
+    description: ' ',
+    achievements: [
+      'Led the full product lifecycle of Image Puzzle Game, from concept to launch, delivering an engaging and intuitive puzzle experience for Android users.',
+      'Designed and developed the Exhibition Image Puzzle Game app, optimizing performance and user retention through iterative testing and updates.',
+      'Analyzed player behavior and feedback to refine game mechanics, difficulty levels, and in-app features for enhanced engagement.',
     ],
   },
 ]
@@ -571,10 +608,9 @@ export const personalInfo = {
   name: 'San Pila',
   title: 'Product Owner | Front-end Developer | Web Developer',
   tagline: 'Building Scalable Web Applications & Digital Products',
-  bio: 'Product Owner and Frontend Developer with 8+ years of experience in software development, web applications, and digital products. Skilled in React.js, Vue.js, Nuxt.js, TypeScript, Node.js, PHP, Laravel, and MySQL, with strong background in Agile/Scrum, Jira, Git, testing, and deployment.',
+  bio: '',
   bioLong:
-    "I have more than 8 years of experience in software development, web applications, frontend development, and digital product development. Currently, I work as a Product Owner and Frontend Developer, combining technical expertise with product and business responsibilities.\n\nI have experience working with stakeholders and cross-functional teams to gather and analyze requirements, define product priorities, manage roadmaps and backlogs, plan sprints, and deliver digital products. I work closely with development teams to translate business and user needs into clear, practical, and valuable solutions.\n\nMy technical expertise includes React.js, Vue.js, Nuxt.js, JavaScript, TypeScript, Node.js, PHP, Laravel, and MySQL. This technical background allows me to communicate effectively with development teams and understand both business requirements and technical perspectives. I am also experienced in Agile/Scrum, Jira, Git, testing, debugging, and deployment.\n\nI am a motivated, adaptable, and solution-oriented professional who enjoys solving problems, improving digital products, and creating solutions that deliver value to both users and businesses.",
-  email: 'pilasan19@gmail.com',
+    "Product Owner/Frontend Developer with experience in product management, software development, frontend development, and web applications. Skilled in product requirements, roadmap planning, backlog prioritization, user stories, acceptance criteria, Agile/Scrum, stakeholder collaboration, product testing, and continuous improvement. Strong technical background in Vue.js, Nuxt.js, React.js, JavaScript, API integration, and responsive web application development, enabling effective collaboration between business and engineering teams. Experienced in translating business and user needs into practical technical solutions and supporting digital products from planning and development through testing, deployment, and continuous improvement.",
   profileImage: '/personalInfo/profileImage.png',
 }
 
@@ -608,22 +644,22 @@ export const productSkills: ProductSkill[] = [
 export const education: EducationItem[] = [
   {
     id: 'pannasastra',
-    degree: 'Computer Science Bachelor Degree',
+    degree: 'English short courses',
     institution: 'Pannasastra University of Cambodia (PUC)',
     period: '2015 — 2017',
-    description: 'Also took English short courses.',
     type: 'degree',
   },
   {
     id: 'norton',
-    degree: 'Science, Also Outstanding student, class monitor',
+    degree: 'Computer Science Bachelor Degree',
     institution: 'Norton University',
     period: '2012 — 2016',
+    description: 'Also Outstanding student, class monitor',
     type: 'degree',
   },
   {
     id: 'kampong-trabek',
-    degree: 'Science',
+    degree: 'Science | Highschool',
     institution: 'Kampong Trabek High School',
     period: '2009 — 2012',
     type: 'degree',
