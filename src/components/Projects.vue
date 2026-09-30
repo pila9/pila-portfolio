@@ -80,7 +80,7 @@ import { projects } from '@/data/portfolioData'
               </div>
 
               <div
-                v-if="project.privacy"
+                v-if="project.privacy && !project.links?.live"
                 class="flex items-center gap-4 pt-2"
               >
                 <span

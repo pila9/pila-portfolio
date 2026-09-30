@@ -190,10 +190,7 @@ export const projects: Project[] = [
     image: '/projects/umpay-admin.png',
     techStack: ['Vue.js 2', 'Vue Router', 'Vuex', 'Element UI', 'Axios', 'ApexCharts', 'Vue I18n', 'Laravel 8 REST APIs'],
     privacy: true,
-    links: {
-      live: 'https://umpay.com/admin',
-      github: 'https://github.com/sanpila/umpay-admin',
-    },
+    links: {},
     certificate: '/certificates/umpay-project.pdf',
   },
   {
@@ -206,7 +203,7 @@ export const projects: Project[] = [
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'QRCode React', 'Pusher', 'Webpack', 'Internal API/i18n'],
     privacy: true,
     links: {
-      live: 'https://umpay.com/gateway',
+      live: 'https://gateway.umpay.io',
       github: 'https://github.com/sanpila/umpay-gateway',
     },
     certificate: '/certificates/umpay-project.pdf',
@@ -221,7 +218,7 @@ export const projects: Project[] = [
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Pusher', 'QR-code Libraries', 'Recharts', 'Webpack', 'Internal REST API/i18n/UI'],
     privacy: true,
     links: {
-      live: 'https://umpay.com',
+      live: 'https://web.umpay.me/login',
       github: 'https://github.com/sanpila/umpay-web',
     },
     certificate: '/certificates/umpay-project.pdf',
@@ -235,7 +232,7 @@ export const projects: Project[] = [
     image: '/projects/umpay-landing.png',
     techStack: ['React 18', 'TypeScript', 'React Router', 'Tailwind CSS', 'Webpack', 'Internal UI/API/i18n'],
     links: {
-      live: 'https://umpay.com/landing',
+      live: 'https://www.umpay.me/',
       github: 'https://github.com/sanpila/umpay-landing',
     },
     certificate: '/certificates/umpay-project.pdf',
@@ -249,10 +246,7 @@ export const projects: Project[] = [
     image: '/projects/orkun-admin.svg',
     techStack: ['Next.js', 'React', 'Material UI', 'Redux Toolkit', 'Axios', 'Charting Tools', 'Laravel Admin API'],
     privacy: true,
-    links: {
-      live: 'https://orkun-app.com/admin',
-      github: 'https://github.com/sanpila/orkun-admin',
-    },
+    links: {},
     certificate: '/certificates/orkun-project.pdf',
   },
   {
@@ -354,10 +348,7 @@ export const projects: Project[] = [
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Chatwoot',
     techStack: ['Vue.js', 'Ruby on Rails', 'Action Cable', 'Docker', 'TypeScript'],
     privacy: true,
-    links: {
-      live: 'https://chatwoot.org',
-      github: 'https://github.com/sanpila/chatwoot',
-    },
+    links: {},
   },
 ]
 
