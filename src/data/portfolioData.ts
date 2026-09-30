@@ -609,8 +609,9 @@ export const personalInfo = {
   title: 'Product Owner | Front-end Developer | Web Developer',
   tagline: 'Transforming Business & User Needs Into Digital Products',
   bio: '',
-  bioLong:
-    "Product Owner/Frontend Developer with experience in product management, software development, frontend development, and web applications. Skilled in product requirements, roadmap planning, backlog prioritization, user stories, acceptance criteria, Agile/Scrum, stakeholder collaboration, product testing, and continuous improvement. Strong technical background in Vue.js, Nuxt.js, React.js, JavaScript, API integration, and responsive web application development, enabling effective collaboration between business and engineering teams. Experienced in translating business and user needs into practical technical solutions and supporting digital products from planning and development through testing, deployment, and continuous improvement.",
+  bioLong: `Experienced in product management, product development, frontend development, and web applications. Skilled in translating business and user needs into clear product requirements, user stories, acceptance criteria, roadmaps, and prioritized backlogs. Experienced in Agile/Scrum, stakeholder collaboration, product testing, UAT, and continuous product improvement.
+
+Strong hands-on technical experience with Vue.js, Nuxt.js, React.js, JavaScript, TypeScript, API integration, and responsive web application development, enabling effective collaboration between business and engineering teams. Experienced in supporting digital products throughout the full product lifecycle, from requirements and planning through development, testing, deployment, and continuous improvement.`,
   profileImage: '/personalInfo/profileImage.png',
 }
 
