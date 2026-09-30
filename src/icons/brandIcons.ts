@@ -49,12 +49,15 @@ export const LaravelIcon = createBrandIcon('simple-icons:laravel', '#FF2D20')
 export const NodeIcon = createBrandIcon('simple-icons:nodedotjs', '#5FA04E')
 export const CSharpIcon = createBrandIcon('simple-icons:csharp', '#512BD4')
 export const DotNetIcon = createBrandIcon('simple-icons:dotnet', '#512BD4')
+export const PythonIcon = createBrandIcon('simple-icons:python', '#3776AB')
 
 // DevOps & Tools Logos
 export const JiraIcon = createBrandIcon('simple-icons:jira', '#0052CC')
 export const GitLabIcon = createBrandIcon('simple-icons:gitlab', '#FC6D26')
 export const DockerIcon = createBrandIcon('simple-icons:docker', '#2496ED')
 export const NginxIcon = createBrandIcon('simple-icons:nginx', '#009639')
+export const PostmanIcon = createBrandIcon('simple-icons:postman', '#FF6C37')
+export const SwaggerIcon = createBrandIcon('simple-icons:swagger', '#85EA2D')
 
 // Databases Logos
 export const MySqlIcon = createBrandIcon('simple-icons:mysql', '#4479A1')

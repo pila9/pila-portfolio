@@ -39,6 +39,7 @@ import {
   GitLabIcon,
   DockerIcon,
   NginxIcon,
+  PostmanIcon,
   MySqlIcon,
   SqlServerIcon,
   PusherIcon,
@@ -50,6 +51,8 @@ import {
   CodexIcon,
   PerplexityIcon,
   StitchIcon,
+  PythonIcon,
+  SwaggerIcon
 } from '@/icons/brandIcons'
 
 export interface SocialLink {
@@ -382,6 +385,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'REST APIs', icon: Network },
       { name: 'C#', icon: CSharpIcon },
       { name: 'ASP.NET Core', icon: DotNetIcon },
+      { name: 'ASP.NET MVC', icon: DotNetIcon },
+      { name: 'Python', icon: PythonIcon },
     ],
   },
   {
@@ -394,6 +399,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Docker', icon: DockerIcon },
       { name: 'Nginx', icon: NginxIcon },
       { name: 'CI/CD', icon: RefreshCw },
+      {name: 'Postman', icon: PostmanIcon },
+      { name: 'Swagger', icon: SwaggerIcon },
     ],
   },
   {
@@ -401,6 +408,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'MySQL', icon: MySqlIcon },
       { name: 'SQL Server', icon: SqlServerIcon },
+      { name: 'PostgreSQL', icon: Server },
+      { name: 'MongoDB', icon: Server },
     ],
   },
   {
@@ -598,7 +607,7 @@ export const certificates: Certificate[] = [
 export const personalInfo = {
   name: 'San Pila',
   title: 'Product Owner | Front-end Developer | Web Developer',
-  tagline: 'Building Scalable Web Applications & Digital Products',
+  tagline: 'Transforming Business & User Needs Into Digital Products',
   bio: '',
   bioLong:
     "Product Owner/Frontend Developer with experience in product management, software development, frontend development, and web applications. Skilled in product requirements, roadmap planning, backlog prioritization, user stories, acceptance criteria, Agile/Scrum, stakeholder collaboration, product testing, and continuous improvement. Strong technical background in Vue.js, Nuxt.js, React.js, JavaScript, API integration, and responsive web application development, enabling effective collaboration between business and engineering teams. Experienced in translating business and user needs into practical technical solutions and supporting digital products from planning and development through testing, deployment, and continuous improvement.",
