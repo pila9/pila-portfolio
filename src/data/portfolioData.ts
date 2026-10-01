@@ -271,31 +271,6 @@ export const projects: Project[] = [
     certificate: '/certificates/orkun-project.pdf',
   },
   {
-    id: 'ionecards',
-    title: 'iOneCards E-Commerce Platform',
-    subtitle: 'E-Commerce Platform',
-    description:
-      'A Cambodia-focused e-commerce platform that connects customers with products, merchants, promotions, vouchers, and rewards. Customers can browse multi-merchant catalogues and stores, discover flash deals and popular products, save items, manage a cart, apply coupons, and complete single-product or multi-merchant orders through ABA Pay, cards, Wing, and Pi Pay, including full and down payments. Account features include authentication with Apple sign-in, order history, reward points, saved products, messages, reviews, followed merchants, profile updates, and help-centre support. The mobile-responsive, PWA-ready experience supports English and Khmer, analytics, and lazy-loaded media.',
-    image: '/projects/ionecards.png',
-    techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Axios', 'Bootstrap', 'Vue I18n', 'PWA', 'JWT Authentication', 'iOneCards API'],
-    links: {
-      live: 'https://www.ionecards.com/',
-      github: '',
-    },
-  },
-  {
-    id: 'ionecloud',
-    title: 'iOneCloud',
-    subtitle: 'Cloud Computing & Tech Solutions',
-    description:
-      'iOneCloud is Cambodia\'s premier cloud service provider, part of the iOne Group. It offers elastic cloud computing products including Elastic Cloud Server (ECS), Elastic IP Address (EIP), Cloud Server Backup Service (CSBS), Elastic Volume Service (EVS), Virtual Private Cloud (VPC), Virtual Firewall (vFW), Security Groups, and Virtual Private Network (VPN). Technology solutions include iOneGPT AI chatbot, SAP ERP hosting, DBaaS, and cPanel web hosting, serving enterprise customers with secure, reliable cloud infrastructure.',
-    image: '/projects/ionecloud.png',
-    techStack: ['WordPress', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
-    links: {
-      live: 'https://ionecloud.com.kh/',
-    },
-  },
-  {
     id: 'gorden-web',
     title: 'Gorden Web',
     subtitle: 'Music & Audiobook Discovery',
@@ -342,6 +317,31 @@ export const projects: Project[] = [
     techStack: ['Vue.js', 'Ruby on Rails', 'Action Cable', 'Docker', 'TypeScript'],
     privacy: true,
     links: {},
+  },
+  {
+    id: 'ionecards',
+    title: 'iOneCards E-Commerce Platform',
+    subtitle: 'E-Commerce Platform',
+    description:
+      'A Cambodia-focused e-commerce platform that connects customers with products, merchants, promotions, vouchers, and rewards. Customers can browse multi-merchant catalogues and stores, discover flash deals and popular products, save items, manage a cart, apply coupons, and complete single-product or multi-merchant orders through ABA Pay, cards, Wing, and Pi Pay, including full and down payments. Account features include authentication with Apple sign-in, order history, reward points, saved products, messages, reviews, followed merchants, profile updates, and help-centre support. The mobile-responsive, PWA-ready experience supports English and Khmer, analytics, and lazy-loaded media.',
+    image: '/projects/ionecards.png',
+    techStack: ['Nuxt.js 2', 'Vue.js', 'Vuex', 'Axios', 'Bootstrap', 'Vue I18n', 'PWA', 'JWT Authentication', 'iOneCards API'],
+    links: {
+      live: 'https://www.ionecards.com/',
+      github: '',
+    },
+  },
+  {
+    id: 'ionecloud',
+    title: 'iOneCloud',
+    subtitle: 'Cloud Computing & Tech Solutions',
+    description:
+      'iOneCloud is Cambodia\'s premier cloud service provider, part of the iOne Group. It offers elastic cloud computing products including Elastic Cloud Server (ECS), Elastic IP Address (EIP), Cloud Server Backup Service (CSBS), Elastic Volume Service (EVS), Virtual Private Cloud (VPC), Virtual Firewall (vFW), Security Groups, and Virtual Private Network (VPN). Technology solutions include iOneGPT AI chatbot, SAP ERP hosting, DBaaS, and cPanel web hosting, serving enterprise customers with secure, reliable cloud infrastructure.',
+    image: '/projects/ionecloud.png',
+    techStack: ['WordPress', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
+    links: {
+      live: 'https://ionecloud.com.kh/',
+    },
   },
 ]
 
