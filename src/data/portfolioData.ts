@@ -94,16 +94,6 @@ export interface SkillCategory {
   skills: Skill[]
 }
 
-export interface ExperienceItem {
-  id: string
-  role: string
-  company: string
-  location: string
-  period: string
-  description: string
-  achievements?: string[]
-}
-
 export interface ContactInfo {
   label: string
   value: string
@@ -451,6 +441,17 @@ export const skillCategories: SkillCategory[] = [
   },
 ]
 
+// Updated Interface supporting nested achievements
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  company: string;
+  location: string;
+  period: string;
+  description?: string;
+  achievements: (string | { title: string; items: string[] })[];
+}
+
 export const experiences: ExperienceItem[] = [
   {
     id: 'pm-fedev',
@@ -460,19 +461,35 @@ export const experiences: ExperienceItem[] = [
     period: 'Jun 2022 — Present',
     description: '',
     achievements: [
-      'Developed and maintained dynamic, responsive web applications using Vue.js, Nuxt.js, and React.js, with a focus on performance, scalability, and user experience.',
-      'Translated business and user needs into clear product requirements, user stories, and acceptance criteria.',
-      'Drove product vision and strategy, including roadmap planning, backlog management, and feature prioritization based on stakeholder and user needs.',
-      'Owned and prioritized the product backlog, defined user stories, and partnered with cross-functional teams to deliver high-quality features in sprints',
-      'Coordinated end-to-end product development, including sprint planning and backlog grooming',
-      'Defined KPIs, tracked delivery in Jira, and monitored post-deployment product metrics to guide feature iteration and improvements',
-      'Conducted systematic testing, debugging, and regular maintenance to improve application functionality, stability, and product quality',
-      'Improved functionality and user experience through feedback-driven iteration and user testing',
-      'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
-      'Collaborated with leadership in weekly stakeholder meetings, providing technical and product insights for decisions and project direction',
-      'Streamlined deployment processes by overseeing server integration and seamless product releases',
-      'Used Jira and GitLab for Agile task management, collaboration, version control, and development workflows.',
-      'Applied SEO best practices to improve web visibility and traffic',
+      {
+        title: 'Product Owner Responsibilities',
+        items: [
+          'Worked with stakeholders to understand business needs and requirements.',
+          'Turned business requirements into user stories, acceptance criteria, and clear tasks for the development team.',
+          'Managed and prioritized the product backlog based on business needs and user priorities.',
+          'Helped plan the product roadmap, features, and delivery timelines.',
+          'Worked closely with developers, UI/UX designers, QA, and stakeholders to deliver product features.',
+          'Used Jira for backlog, sprint, task, and project management and GitLab for version control and development collaboration.',
+          'Supported UAT and product testing, collected user feedback, and identified improvements.',
+          'Communicated with the development team to clarify requirements and handle changes during development.',
+          'Followed up on development progress, issues, and releases to support successful delivery.',
+          'Monitored product performance and feedback to identify opportunities for improvement.',
+        ],
+      },
+      {
+        title: 'Frontend Developer Responsibilities',
+        items: [
+          'Developed and maintained responsive web applications using Vue.js, Nuxt.js, React.js, JavaScript, and TypeScript.',
+          'Worked on several admin-side projects, developing frontend interfaces based directly on business requirements.',
+          'Translated business requirements into practical website layouts, user interfaces, and frontend features, including projects without a dedicated UI/UX designer.',
+          'Developed reusable UI components and implemented responsive designs for different screen sizes[cite: 9].',
+          'Integrated REST APIs and real-time data using WebSockets and Pusher.',
+          'Worked directly with stakeholders to understand feedback and adjust features and interfaces based on business needs.',
+          'Troubleshot and debugged frontend issues and optimized applications for performance, usability, stability, and cross-browser compatibility.',
+          'Applied SEO and web performance best practices to improve website visibility, performance, and user experience.',
+          'Used Git/GitLab for version control and collaborative development.',
+        ],
+      },
     ],
   },
   {
@@ -483,16 +500,31 @@ export const experiences: ExperienceItem[] = [
     period: 'Jan 2020 — May 2022',
     description: '',
     achievements: [
-      'Built, designed, developed, and modified responsive web applications with Laravel, PHP, MySQL, JavaScript, jQuery, Ajax, HTML/CSS3, Bootstrap, and Nuxt.js',
-      'Built the Nuxt.js iOneCards e-commerce platform with English and Khmer support and PWA capabilities',
-      'Developed Android applications using Java and Kotlin',
-      'Designed and implemented custom web templates to meet client requirements and improve user experience',
-      'Analyzed and designed databases to support application requirements and reliable data operations',
-      'Conducted testing, identified bugs and errors, and performed maintenance to improve application functionality and stability',
-      'Improved website functionality and user experience through iterative feedback, user testing, and bug resolution',
-      'Applied SEO best practices to improve web visibility and traffic',
-      'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
-      'Used GitLab for version control, code quality, and collaboration, and Jira for task tracking, project management, and workflow optimization',
+      {
+        title: 'Web Developer Responsibilities',
+        items: [
+          'Built, designed, developed, and modified responsive web applications with Laravel, PHP, MySQL, JavaScript, jQuery, Ajax, HTML/CSS3, Bootstrap, and Nuxt.js',
+          'Developed the Nuxt.js iOneCards e-commerce platform, integrating REST APIs',
+          'Designed and implemented custom web templates and user interfaces based on business requirements and e-commerce needs, working without a dedicated UI/UX designer.',
+          'Translated business and client requirements into practical web layouts and functional features.',
+          'Analyzed and designed databases to support application requirements and reliable data operations.',
+          'Conducted frontend testing and quality checks independently, identified bugs and errors, and implemented fixes without a dedicated QA team.',
+          'Improved website functionality and user experience through iterative feedback, user testing, and bug resolution',
+          'Applied SEO best practices to improve web visibility and performance.',
+          'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
+          'Used GitLab for version control, code quality, and collaboration, and Jira for task tracking, project management, and workflow optimization',
+        ],
+      },
+      {
+        title: 'Android Developer Responsibilities',
+        items: [
+          'Developed and maintained the iOneCards Android application using Java and Kotlin.',
+          'Designed and implemented application updates and new features based on project requirements.',
+          'Tested Android applications independently, identified bugs and errors, and implemented fixes.',
+          'Troubleshot and debugged Android application issues to improve stability and user experience.',
+          'Worked on Android application development, maintenance, and continuous improvements.',
+        ],
+      },
     ],
   },
   {
@@ -504,6 +536,7 @@ export const experiences: ExperienceItem[] = [
     description: ' ',
     achievements: [
       'Developed and maintained web applications with ASP.NET MVC, ASP.NET Core, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap',
+      'Designed and developed custom web templates and user interfaces based on project requirements, working without a dedicated UI/UX designer.',
       'Implemented blockchain payment transactions using MetaMask and MyEtherWallet',
       'Created custom web templates to meet project requirements and improve user experience',
       'Maintained and improved website functionality through iterative feedback and user testing',
@@ -551,13 +584,12 @@ export const experiences: ExperienceItem[] = [
     period: 'Oct 2015 — Oct 2015',
     description: ' ',
     achievements: [
-      'Led the full product lifecycle of Image Puzzle Game, from concept to launch, delivering an engaging and intuitive puzzle experience for Android users.',
-      'Designed and developed the Exhibition Image Puzzle Game app, optimizing performance and user retention through iterative testing and updates.',
+      'Led the full product lifecycle of Image Puzzle Game, from concept to launch, delivering an engaging and intuitive puzzle experience for Android users.',
+      'Designed and developed the Exhibition Image Puzzle Game app, optimizing performance and user retention through iterative testing and updates.',
       'Analyzed player behavior and feedback to refine game mechanics, difficulty levels, and in-app features for enhanced engagement.',
     ],
   },
-]
-
+];
 export const contactInfo: ContactInfo[] = [
   { label: 'Email', value: 'pilasan19@gmail.com', href: 'mailto:pilasan19@gmail.com', icon: Mail },
   { label: 'Phone', value: '0856 421 82', href: 'tel:+85585642182', icon: Phone },

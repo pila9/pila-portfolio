@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { experiences } from '@/data/portfolioData'
 import { MapPin, Calendar } from '@lucide/vue'
+
+const isAchievementGroup = (achievement: string | { title: string; items: string[] }): achievement is { title: string; items: string[] } => {
+  return typeof achievement === 'object' && 'title' in achievement
+}
 </script>
 
 <template>
@@ -44,20 +48,27 @@ import { MapPin, Calendar } from '@lucide/vue'
             </div>
           </div>
 
-          <p class="text-slate-300 mb-4">
+          <p class="text-slate-300 mb-4" v-if="exp.description">
             {{ exp.description }}
           </p>
 
-          <ul class="space-y-2">
-            <li
-              v-for="(achievement, index) in exp.achievements"
-              :key="index"
-              class="flex items-start gap-3 text-slate-300 text-sm"
-            >
-              <span class="text-emerald-400 mt-0.5">▹</span>
-              <span>{{ achievement }}</span>
-            </li>
-          </ul>
+          <div class="space-y-4">
+            <template v-for="(achievement, index) in exp.achievements" :key="index">
+              <div v-if="isAchievementGroup(achievement)" class="space-y-2 pl-2 border-l-2 border-emerald-400/30">
+                <h4 class="text-sm font-semibold text-emerald-300 uppercase tracking-wider">{{ achievement.title }}</h4>
+                <ul class="space-y-1.5">
+                  <li v-for="(item, itemIndex) in achievement.items" :key="itemIndex" class="flex items-start gap-3 text-slate-300 text-sm">
+                    <span class="text-emerald-400 mt-0.5 flex-shrink-0">▹</span>
+                    <span>{{ item }}</span>
+                  </li>
+                </ul>
+              </div>
+              <li v-else class="flex items-start gap-3 text-slate-300 text-sm">
+                <span class="text-emerald-400 mt-0.5 flex-shrink-0">▹</span>
+                <span>{{ achievement }}</span>
+              </li>
+            </template>
+          </div>
         </div>
       </div>
     </div>
