@@ -535,18 +535,31 @@ export const experiences: ExperienceItem[] = [
     period: 'May 2018 — Dec 2019',
     description: ' ',
     achievements: [
-      'Developed and maintained web applications with ASP.NET MVC, ASP.NET Core, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap',
-      'Designed and developed custom web templates and user interfaces based on project requirements, working without a dedicated UI/UX designer.',
-      'Implemented blockchain payment transactions using MetaMask and MyEtherWallet',
-      'Created custom web templates to meet project requirements and improve user experience',
-      'Maintained and improved website functionality through iterative feedback and user testing',
-      'Tested web applications, identified bugs and errors, and delivered fixes to improve stability',
-      'Used GitLab for version control, code quality, and collaboration; optimized workflows.',
-      'Maintain and improve website functionality and user experience through iterative feedback and user testing.',
-      'Utilize GitLab for version control and project management, maintaining code quality and collaboration.',
-      'Oversee project deployment to the server, ensuring seamless integration and operation.',
-      'Test and finding out bug / error all web application',
-      'Contributed to blockchain projects, attended an Intel IoT workshop in Malaysia, and interviewed candidates',
+      {
+        title: 'Web Developer Responsibilities',
+        items: [
+          'Developed and maintained web applications with ASP.NET MVC, ASP.NET Core, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap',
+          'Designed and developed custom web templates and user interfaces based on project requirements, working without a dedicated UI/UX designer.',
+          'Created custom web templates to meet project requirements and improve user experience',
+          'Maintained and improved website functionality through iterative feedback and user testing',
+          'Tested web applications, identified bugs and errors, and delivered fixes to improve stability',
+        ],
+      },
+      {
+        title: 'Blockchain & Web3 Integration',
+        items: [
+          'Implemented blockchain payment transactions using MetaMask and MyEtherWallet',
+          'Contributed to blockchain projects, attended an Intel IoT workshop in Malaysia, and interviewed candidates',
+        ],
+      },
+      {
+        title: 'DevOps & Deployment',
+        items: [
+          'Used GitLab for version control, code quality, and collaboration; optimized workflows.',
+          'Utilize GitLab for version control and project management, maintaining code quality and collaboration.',
+          'Oversee project deployment to the server, ensuring seamless integration and operation.',
+        ],
+      },
     ],
   },
   {
@@ -557,36 +570,78 @@ export const experiences: ExperienceItem[] = [
     period: 'Apr 2017 — Apr 2018',
     description: '',
     achievements: [
-      'Led full lifecycle development of 2D/3D applications for Mobile and Windows platforms',
-      'Designed UI/UX for immersive VR environments with intuitive interfaces and animations',
-      'Optimized performance through lightweight packaging, profiling, and iterative testing (frame rate optimization, asset compression)',
-      'Conducted research on new technologies related to real estate VR applications',
+      {
+        title: 'VR/MR Development & Engineering',
+        items: [
+          'Spearheaded the end-to-end development of 2D/3D applications for Mobile and Windows platforms and Mixed Reality (VR) experiences using Unreal Engine, aligning technical solutions with user needs and business objectives.',
+          'Researched and implemented new Unreal Engine functions and technologies to support project development and improve application capabilities.',
+        ],
+      },
+      {
+        title: 'UI/UX Design for Immersive Experiences',
+        items: [
+          'Led UI/UX design for immersive environments, creating intuitive 2D/3D interfaces, interactive experiences, and animations to improve usability and user engagement.',
+        ],
+      },
+      {
+        title: 'Performance Optimization',
+        items: [
+          'Optimized application performance through lightweight packaging, performance profiling, asset compression, and iterative testing, including frame-rate optimization and resource management.',
+        ],
+      },
+      {
+        title: 'Research & Stakeholder Collaboration',
+        items: [
+          'Researched and learned new technologies, features, and solutions related to real estate, identifying opportunities to improve visualization, interaction, and digital experiences.',
+          'Collaborated with stakeholders to understand business requirements and user needs, translating them into practical features and immersive product experiences.',
+        ],
+      },
     ],
   },
   {
     id: 'ecommerce-freelance',
-    role: 'E-Commerce & Digital Product Development',
+    role: 'Freelance Web Developer',
     company: 'Norton University',
     location: 'Phnom Penh, Cambodia',
     period: 'Sep 2016 — Sep 2016',
     description: ' ',
     achievements: [
-      'Led end-to-end development of online e-commerce platform for Angkor Color Construction',
-      'Built and optimized exhibition website to showcase products, improve brand visibility, and generate leads',
-      'Collaborated with marketing and sales teams to align web features with business objectives',
+      {
+        title: 'E-Commerce Website Development',
+        items: [
+          'Developed an e-commerce website project for exhibition and school demonstration, based on a construction company concept.',
+          'Built product pages and shopping features to demonstrate the online store concept.',
+        ],
+      },
+      {
+        title: 'Technologies',
+        items: [
+          'ASP.NET MVC, C#, SQL, JavaScript, jQuery, Ajax, and Bootstrap',
+        ],
+      },
     ],
   },
   {
     id: 'game-freelance',
-    role: 'Mobile Game Development & Product Strategy ',
+    role: 'Freelance Game Developer',
     company: 'Norton University',
     location: 'Phnom Penh, Cambodia',
     period: 'Oct 2015 — Oct 2015',
     description: ' ',
     achievements: [
-      'Led the full product lifecycle of Image Puzzle Game, from concept to launch, delivering an engaging and intuitive puzzle experience for Android users.',
-      'Designed and developed the Exhibition Image Puzzle Game app, optimizing performance and user retention through iterative testing and updates.',
-      'Analyzed player behavior and feedback to refine game mechanics, difficulty levels, and in-app features for enhanced engagement.',
+      {
+        title: 'Game Development',
+        items: [
+          'Developed an Image Puzzle Game Android app for a school exhibition and project demonstration.',
+          'Designed the game interface and implemented interactive puzzle features.',
+        ],
+      },
+      {
+        title: 'Technologies',
+        items: [
+          'Java, Android SDK',
+        ],
+      },
     ],
   },
 ];
