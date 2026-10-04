@@ -462,31 +462,32 @@ export const experiences: ExperienceItem[] = [
     description: '',
     achievements: [
       {
-        title: 'Product Owner Responsibilities',
+        title: 'Product Owner',
         items: [
-          'Worked with stakeholders to understand business needs and requirements.',
-          'Turned business requirements into user stories, acceptance criteria, and clear tasks for the development team.',
-          'Managed and prioritized the product backlog based on business needs and user priorities.',
-          'Helped plan the product roadmap, features, and delivery timelines.',
-          'Worked closely with developers, UI/UX designers, QA, and stakeholders to deliver product features.',
+          'Collaborated with stakeholders to understand business needs, user priorities, and product goals.',
+          'Translated business requirements into clear user stories, acceptance criteria, prioritized tasks, and actionable requirements for the development team.',
+          'Managed and prioritized the product backlog according to business value, user needs, delivery constraints, and product priorities.',
+          'Supported product roadmap planning, feature definition, sprint planning, and delivery timeline management.',
+          'Coordinated with developers, UI/UX designers, QA, and stakeholders to clarify requirements and deliver product features.',
           'Used Jira for backlog, sprint, task, and project management and GitLab for version control and development collaboration.',
-          'Supported UAT and product testing, collected user feedback, and identified improvements.',
-          'Communicated with the development team to clarify requirements and handle changes during development.',
-          'Followed up on development progress, issues, and releases to support successful delivery.',
+          'Supported UAT and product testing, gathered user feedback, and identified opportunities for continuous product improvement.',
+          'Clarified requirements, managed changes during development, and helped resolve delivery issues with the engineering team.',
+          'Tracked development progress, risks, issues, and releases to support timely and successful delivery.',
           'Monitored product performance and feedback to identify opportunities for improvement.',
         ],
       },
       {
-        title: 'Frontend Developer Responsibilities',
+        title: 'Frontend Developer',
         items: [
           'Developed and maintained responsive web applications using Vue.js, Nuxt.js, React.js, JavaScript, and TypeScript.',
-          'Worked on several admin-side projects, developing frontend interfaces based directly on business requirements.',
-          'Translated business requirements into practical website layouts, user interfaces, and frontend features, including projects without a dedicated UI/UX designer.',
-          'Developed reusable UI components and implemented responsive designs for different screen sizes[cite: 9].',
-          'Integrated REST APIs and real-time data using WebSockets and Pusher.',
+          'Built frontend interfaces for multiple admin-side products based directly on business requirements and operational workflows.',
+          'Translated business requirements into practical layouts, user interfaces, and frontend features, including projects without dedicated UI/UX support.',
+          'Developed reusable UI components and responsive layouts for desktop, tablet, and mobile screen sizes.',
+          'Integrated REST APIs and real-time data using WebSockets and Pusher for interactive web applications.',
           'Worked directly with stakeholders to understand feedback and adjust features and interfaces based on business needs.',
-          'Troubleshot and debugged frontend issues and optimized applications for performance, usability, stability, and cross-browser compatibility.',
+          'Troubleshot frontend issues and optimized applications for performance, usability, stability, and cross-browser compatibility.',
           'Applied SEO and web performance best practices to improve website visibility, performance, and user experience.',
+          'Experienced in integrating third-party tools and services (Firebase, i18n, Hotjar, Google Analytics, payment gateways) to drive product analytics, digital transactions, localization, and user insights.',
           'Used Git/GitLab for version control and collaborative development.',
         ],
       },
@@ -501,7 +502,7 @@ export const experiences: ExperienceItem[] = [
     description: '',
     achievements: [
       {
-        title: 'Web Developer Responsibilities',
+        title: 'Web Developer',
         items: [
           'Built, designed, developed, and modified responsive web applications with Laravel, PHP, MySQL, JavaScript, jQuery, Ajax, HTML/CSS3, Bootstrap, and Nuxt.js',
           'Developed the Nuxt.js iOneCards e-commerce platform, integrating REST APIs',
@@ -510,13 +511,14 @@ export const experiences: ExperienceItem[] = [
           'Analyzed and designed databases to support application requirements and reliable data operations.',
           'Conducted frontend testing and quality checks independently, identified bugs and errors, and implemented fixes without a dedicated QA team.',
           'Improved website functionality and user experience through iterative feedback, user testing, and bug resolution',
-          'Applied SEO best practices to improve web visibility and performance.',
+          'Applied SEO and web performance best practices to improve website visibility, performance, and user experience.',
           'Collected user feedback, monitored product performance and KPIs, and continuously improved features based on data and user needs.',
+          'Experienced in integrating third-party tools and services (Firebase, i18n, Hotjar, Google Analytics, payment gateways) to drive product analytics, digital transactions, localization, and user insights',
           'Used GitLab for version control, code quality, and collaboration, and Jira for task tracking, project management, and workflow optimization',
         ],
       },
       {
-        title: 'Android Developer Responsibilities',
+        title: 'Android Developer',
         items: [
           'Developed and maintained the iOneCards Android application using Java and Kotlin.',
           'Designed and implemented application updates and new features based on project requirements.',
@@ -696,9 +698,9 @@ export const personalInfo = {
   title: 'Product Owner | Front-end Developer | Web Developer',
   tagline: 'Transforming Business & User Needs Into Digital Products',
   bio: '',
-  bioLong: `Experienced in product management, product development, frontend development, and web applications. Skilled in translating business and user needs into clear product requirements, user stories, acceptance criteria, roadmaps, and prioritized backlogs. Experienced in Agile/Scrum, stakeholder collaboration, product testing, UAT, and continuous product improvement.
-
-Strong hands-on technical experience with Vue.js, Nuxt.js, React.js, JavaScript, TypeScript, API integration, and responsive web application development, enabling effective collaboration between business and engineering teams. Experienced in supporting digital products throughout the full product lifecycle, from requirements and planning through development, testing, deployment, and continuous improvement.`,
+  bioLong: `Experience translating business and user needs into clear product requirements, user stories, acceptance criteria, prioritized backlogs, and delivery plans. Experienced in Agile/Scrum, stakeholder collaboration, UAT, product testing, and continuous product improvement.
+            Hands-on technical experience with Vue.js, Nuxt.js, React.js, JavaScript, TypeScript, REST API integration, WebSockets, and responsive web application development. Able to bridge business and engineering teams throughout the product lifecycle, from discovery and planning through development, testing, deployment, and improvement.
+          `,
   profileImage: '/personalInfo/profileImage.png',
 }
 
