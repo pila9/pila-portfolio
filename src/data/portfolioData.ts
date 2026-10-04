@@ -13,6 +13,13 @@ import {
   Repeat,
   Languages,
   RefreshCw,
+  Lightbulb,
+  MessageSquare,
+  Handshake,
+  ScanEye,
+  Clock,
+  Target,
+  GraduationCap,
 } from '@lucide/vue'
 
 import {
@@ -430,6 +437,19 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Codex', icon: CodexIcon },
       { name: 'perplexity.ai', icon: PerplexityIcon },
       { name: 'stitch.ai', icon: StitchIcon },
+    ],
+  },
+  {
+    title: 'Soft Skills',
+    skills: [
+      { name: 'Problem-Solving', icon: Lightbulb },
+      { name: 'Communication', icon: MessageSquare },
+      { name: 'Cross-Functional Teamwork', icon: Handshake },
+      { name: 'Attention to Detail', icon: ScanEye },
+      { name: 'Adaptability', icon: RefreshCw },
+      { name: 'Time Management', icon: Clock },
+      { name: 'Ownership', icon: Target },
+      { name: 'Continuous Learning', icon: GraduationCap },
     ],
   },
   {
