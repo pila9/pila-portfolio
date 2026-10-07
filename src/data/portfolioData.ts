@@ -285,23 +285,11 @@ export const projects: Project[] = [
       'A multilingual, responsive digital-entertainment platform for discovering music, artists, albums, top charts, new releases, and audiobooks, seamlessly connected with the Gorden/E-Play mobile ecosystem. Its large media catalogue is easy to explore across countries, genres, and content types. Users can search songs, artists, albums, and audiobooks; view detailed content pages; play audio; create collections; and share or continue content through QR codes and mobile deep links. It supports more than 30 languages and is deployed as a Dockerized static site with Nginx.',
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Gorden+Web',
     techStack: ['Nuxt.js', 'Vue.js', 'Vuetify', 'Vuex', 'REST API', 'Docker', 'Nginx'],
-    privacy: true,
+privacy: true,
     links: {
       live: 'https://gorden.com',
       github: 'https://github.com/sanpila/gorden-web',
     },
-  },
-  {
-    id: 'voting-admin',
-    title: 'Voting Admin Web',
-    subtitle: 'Voting & Prediction Operations Dashboard',
-    description:
-      'A secure operations dashboard for managing a voting and prediction platform. Administrators can oversee the complete topic lifecycle—from preview and publishing through active voting, closing, settlement, and deletion—while monitoring user activity and financial game data. It includes role-based access, account and user management, report and appeal moderation, blacklists, maintenance controls, configurable whitelists, categories, tags, countries, languages, announcements, game settings, and payment/channel limits. Financial operations cover user bets, income, commissions, service fees, cashback, wallet balances, and balance adjustments in a scalable, multi-currency system with secure authentication and audit-friendly controls.',
-    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Voting+Admin',
-    techStack: ['React', 'TypeScript', 'Material UI', 'Node.js', 'TypeScript API', 'Multi-currency'],
-    privacy: true,
-    links: {},
-    certificate: '/certificates/voting-music.pdf',
   },
   {
     id: 'ofl-admin',
