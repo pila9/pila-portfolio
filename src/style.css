@@ -5,9 +5,15 @@
     scroll-behavior: smooth;
   }
 
-  body {
-    @apply bg-slate-900 text-slate-100 antialiased font-sans;
-  }
+body {
+  @apply bg-slate-900 text-slate-100 antialiased font-sans;
+  background-image: url('/projects/ionecards.png'), radial-gradient(circle at center, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 70%);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 }
 
 .section {

@@ -21,7 +21,7 @@ import {
   Target,
   GraduationCap,
 } from '@lucide/vue'
-
+ 
 import {
   GitHub,
   LinkedIn,
@@ -40,8 +40,6 @@ import {
   PhpIcon,
   LaravelIcon,
   NodeIcon,
-  CSharpIcon,
-  DotNetIcon,
   JiraIcon,
   GitLabIcon,
   DockerIcon,
@@ -338,6 +336,32 @@ privacy: true,
       live: 'https://ionecloud.com.kh/',
     },
   },
+  {
+    id: 'morrow',
+    title: 'Morrow',
+    subtitle: 'Personal Project: AI-Powered E-Commerce Demo',
+    description: `Morrow is a curated shopping experience for thoughtful everyday products. A shopper can browse by category, or describe what they need and get an AI-generated product edit from the catalog. They can save favorites, add items to a persistent shopping bag, adjust quantities, and review the subtotal. The flow ends with a demo checkout that confirms the journey without collecting payment information.`,
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Morrow',
+    techStack: ['Next.js', 'React', 'Tailwind CSS', 'Vercel', 'OpenAI API'],
+    privacy: false,
+    links: {
+      live: 'https://ai-product-e-commerce.vercel.app/',
+      github: '',
+    },
+  },
+  {
+    id: 'inventra-erp',
+    title: 'Inventra ERP Starter',
+    subtitle: 'Personal Project: Full-Stack ERP Starter',
+    description: `Designed and built a full-stack ERP starter that connects inventory management, production planning, customer order fulfillment, support operations, and sales reporting. Implemented transactional stock updates for production and order fulfillment, role-based access control, and secure server-managed authentication. Deployed the React frontend and Node.js REST API on Vercel with Prisma and Neon PostgreSQL.`,
+    image: 'https://placehold.co/800x600/1e293b/ffffff?text=Inventra+ERP',
+    techStack: ['React', 'JavaScript', 'TypeScript', 'Node.js', 'Express REST API', 'Prisma', 'PostgreSQL', 'Vercel'],
+    privacy: false,
+    links: {
+      live: 'https://inventra-erp-starter.vercel.app/',
+      github: '',
+    },
+  }
 ]
 
 export const skillCategories: SkillCategory[] = [
@@ -368,9 +392,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Laravel', icon: LaravelIcon },
       { name: 'Node.js', icon: NodeIcon },
       { name: 'REST APIs', icon: Network },
-      { name: 'C#', icon: CSharpIcon },
-      { name: 'ASP.NET Core', icon: DotNetIcon },
-      { name: 'ASP.NET MVC', icon: DotNetIcon },
       { name: 'Python', icon: PythonIcon },
     ],
   },
