@@ -82,6 +82,7 @@ export interface Project {
   techStack: string[]
   privacy?: boolean
   buttonText?: string
+  status?: string
   links: {
     live?: string
     github?: string
@@ -344,6 +345,7 @@ privacy: true,
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Morrow',
     techStack: ['Next.js', 'React', 'Tailwind CSS', 'Vercel', 'OpenAI API'],
     privacy: false,
+    status: 'Still Improving',
     links: {
       live: 'https://ai-product-e-commerce.vercel.app/',
       github: '',
@@ -357,6 +359,7 @@ privacy: true,
     image: 'https://placehold.co/800x600/1e293b/ffffff?text=Inventra+ERP',
     techStack: ['React', 'JavaScript', 'TypeScript', 'Node.js', 'Express REST API', 'Prisma', 'PostgreSQL', 'Vercel'],
     privacy: false,
+    status: 'Still Improving',
     links: {
       live: 'https://inventra-erp-starter.vercel.app/',
       github: '',
@@ -485,7 +488,7 @@ export const experiences: ExperienceItem[] = [
   {
     id: 'pm-fedev',
     role: 'Product Owner and Front-end Developer',
-    company: 'Everlast & Apps Dev Co., Ltd',
+    company: 'Everlast Information & Apps Dev Co., Ltd',
     location: 'Phnom Penh, Cambodia',
     period: 'Jun 2022 — Present',
     description: '',

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { projects } from '@/data/portfolioData'
+import { LoaderCircle } from '@lucide/vue'
 </script>
 
 <template>
@@ -53,12 +54,19 @@ import { projects } from '@/data/portfolioData'
               ]"
             >
               <div>
-                <div class="flex items-baseline gap-3 mb-1">
+                <div class="flex flex-wrap items-baseline gap-3 mb-1">
                   <h3
                     class="text-2xl font-bold text-slate-100 group-hover:text-emerald-400 transition-colors"
                   >
                     {{ project.title }}
                   </h3>
+                  <span
+                    v-if="project.status"
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-amber-300 bg-amber-500/10 border border-amber-400/30 rounded-full"
+                  >
+                    <LoaderCircle class="w-3.5 h-3.5 animate-spin" />
+                    {{ project.status }}
+                  </span>
                 </div>
                 <p class="text-slate-400 text-sm">
                   {{ project.subtitle }}
