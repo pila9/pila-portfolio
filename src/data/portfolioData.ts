@@ -366,7 +366,7 @@ privacy: true,
     },
   },
   {
-    id: 'energy-storage-analytics',
+    id: 'ecommerce-sales-analytics',
     title: 'E-commerce Sales Analytics',
     subtitle: 'Synthetic E-commerce Analytics Dashboard',
     description: `Built an interactive Streamlit dashboard to analyze 5,512 synthetic e-commerce orders across products, categories, sales channels, and regions. The project includes net sales, average order value, items sold, and return-rate KPIs; interactive filters and sales charts; top-product analysis; SQL queries; and unit-tested calculations.`,
@@ -374,8 +374,8 @@ privacy: true,
     privacy: false,
     buttonText: 'View E-commerce Project on GitHub',
     links: {
-      live: 'https://github.com/pila9/energy-storage-performance-analytics',
-      github: 'https://github.com/pila9/energy-storage-performance-analytics',
+      live: 'https://github.com/pila9/ecommerce-sales-analytics',
+      github: 'https://github.com/pila9/ecommerce-sales-analytics',
     },
   }
 ]
