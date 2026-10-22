@@ -364,6 +364,20 @@ privacy: true,
       live: 'https://inventra-erp-starter.vercel.app/',
       github: '',
     },
+  },
+  {
+    id: 'energy-storage-analytics',
+    title: 'Energy Storage Performance Analytics',
+    subtitle: 'Synthetic BESS Performance Dashboard',
+    description: `Built an interactive Streamlit dashboard to analyze 720 synthetic daily battery records across three sites. The project includes weighted round-trip efficiency and availability KPIs, SQL performance queries, threshold-based review flags, and unit tests for KPI calculations.`,
+    image: 'https://raw.githubusercontent.com/pila9/energy-storage-performance-analytics/main/screenshots/dashboard.png',
+    techStack: ['Python', 'Pandas', 'Streamlit', 'Plotly', 'SQL', 'Unit Testing'],
+    privacy: false,
+    buttonText: 'View Project on GitHub',
+    links: {
+      live: 'https://github.com/pila9/energy-storage-performance-analytics',
+      github: 'https://github.com/pila9/energy-storage-performance-analytics',
+    },
   }
 ]
 
