@@ -372,9 +372,9 @@ privacy: true,
     description: `Built an interactive Streamlit dashboard to analyze 5,512 synthetic e-commerce orders across products, categories, sales channels, and regions. The project includes net sales, average order value, items sold, and return-rate KPIs; interactive filters and sales charts; top-product analysis; SQL queries; and unit-tested calculations.`,
     techStack: ['Python', 'Pandas', 'NumPy', 'Streamlit', 'Plotly', 'SQL', 'Unit Testing'],
     privacy: false,
-    buttonText: 'View E-commerce Project on GitHub',
+    buttonText: 'Open Live Dashboard',
     links: {
-      live: 'https://github.com/pila9/ecommerce-sales-analytics',
+      live: 'https://pila9-ecommerce-sales-analytics-app-xhqki4.streamlit.app/',
       github: 'https://github.com/pila9/ecommerce-sales-analytics',
     },
   }
